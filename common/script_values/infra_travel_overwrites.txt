@@ -1,0 +1,11 @@
+@hills_danger_value = 45
+@mountains_danger_value = 65
+@desert_danger_value = 50
+@desert_mountains_danger_value = 65
+@jungle_danger_value = 65
+@forest_danger_value = 45
+@taiga_danger_value = 55
+@wetlands_danger_value = 65
+@steppe_danger_value = 50
+@floodplains_danger_value = 35
+@drylands_danger_value = 35

@@ -1,0 +1,115 @@
+on_game_start_infra_roads = {
+	effect = {
+		every_province = {
+			limit = {
+				has_holding = yes
+			}
+			save_scope_as = province
+
+			add_province_modifier = extra_building_slot
+
+			if = {
+				limit = {
+					scope:province.county.development_level <= 2
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						scope:province.county.development_level <= 5
+					}
+					add_building = infra_road_01
+				}
+				else = {
+					if = {
+						limit = {
+							scope:province.county.development_level <= 12
+						}
+						add_building = infra_road_02
+					}
+					else = {
+						if = {
+							limit = {
+								scope:province.county.development_level <= 29
+							}
+							add_building = infra_road_03
+						}
+						else = {
+							if = {
+								limit = {
+									scope:province.county.development_level <= 27
+								}
+								add_building = infra_road_04
+							}
+							else = {
+								if = {
+									limit = {
+										scope:province.county.development_level <= 35
+									}
+									add_building = infra_road_05
+								}
+								else = {
+									if = {
+										limit = {
+											scope:province.county.development_level <= 44
+										}
+										add_building = infra_road_06
+									}
+									else = {
+										add_building = infra_road_07
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		province:4828 = {
+			remove_building = infra_road_01
+			remove_building = infra_road_02
+			remove_building = infra_road_03
+			remove_building = infra_road_04
+			remove_building = infra_road_05
+			remove_building = infra_road_06
+			remove_building = infra_road_07
+			remove_building = infra_road_08
+			add_building = infra_road_07
+		}
+	}
+}
+
+on_game_start_infra_provice_count = {
+	effect = {
+		set_global_variable = {
+			name = infra_province_count
+			value = 0
+		}
+		every_province = {
+			change_global_variable = {
+				name = infra_province_count
+				add = 1
+			}
+		}
+		set_global_variable = {
+			name = infra_holding_count
+			value = 0
+		}
+		every_province = {
+			limit = {
+				has_holding = yes
+			}
+			change_global_variable = {
+				name = infra_province_count_with_holding
+				add = 1
+			}
+		}
+	}
+}
+
+on_game_start = {
+	on_actions = {
+		on_game_start_infra_roads
+		on_game_start_infra_provice_count
+	}
+}

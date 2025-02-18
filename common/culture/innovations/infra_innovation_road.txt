@@ -1,0 +1,3 @@
+#infra_innovation_road = {
+#	culture_era = culture_era_tribal
+#}

@@ -1,0 +1,54 @@
+# scope: character
+# PROVINCE: the province where the road should be constructed
+can_construct_road_potential = {
+	$PROVINCE$ = {
+		AND = {
+			NOT = {
+				has_building_or_higher = infra_road_01
+			}
+		}
+	}
+}
+
+# scope: character
+# PROVINCE: the province where the road should be constructed
+can_upgrade_road_potential = {
+	AND = {
+		has_building = infra_road_01
+		can_construct_road_02 = {PROVINCE = $PROVINCE$}
+	}
+}
+
+# scope: character
+# PROVINCE: the province where the road should be constructed
+can_construct_or_upgrade_road_potential = {
+	OR = {
+		can_construct_road_potential = {PROVINCE = $PROVINCE$}
+		can_upgrade_road_potential = {PROVINCE = $PROVINCE$}
+	}
+}
+
+# scope: character
+# PROVINCE: the province where the road should be constructed
+can_construct_road_01 = {
+	$PROVINCE$ = {
+		AND = {
+			NOT = {
+				has_building_or_higher = infra_road_01
+			}
+		}
+	}
+}
+
+# scope: character
+# PROVINCE: the province where the road should be constructed
+can_construct_road_02 = {
+	$PROVINCE$ = {
+		AND = {
+			NOT = {
+				has_building_or_higher = infra_road_02
+			}
+			has_building = infra_road_01
+		}
+	}
+}

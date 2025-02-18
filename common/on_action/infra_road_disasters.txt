@@ -1,0 +1,48 @@
+infra_banditry_quarterly_pulse = {
+	effect = {
+		# banitry
+		#every_ruler = {
+		#	trigger_event = {
+		#		id = infra_banitry.0001
+		#		days = { 0 365 }
+		#	}
+		#}
+
+
+		#every_ruler = {
+		#	every_sub_realm_county = {
+		#		
+		#	}
+		#	
+		#}
+		# winter
+		#every_province = {
+		#	random = {
+		#		chance = {
+		#			value = 0
+					#if = {
+					#	limit = {
+					#		has_province_modifier = winter_harsh_modifier
+					#	}
+					#	add = 20
+					#}
+		#		}
+		#		trigger_event = {
+		#			id = infra_winter_disaster.0001
+		#		}
+		#	}
+		#}
+	}
+}
+
+#yearly_global_pulse = {
+#	on_actions = {
+#		infra_yearly_global_pulse
+#	}
+#}
+
+quarterly_playable_pulse = {
+	on_actions = {
+		infra_banditry_quarterly_pulse
+	}
+}

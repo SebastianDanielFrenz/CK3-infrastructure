@@ -1,0 +1,49 @@
+# Settings for character based travel (not army travel)
+NTravel = {
+	BASE_TRAVEL_SPEED_LAND = 3 # The base speed used when traveling from a land province
+	BASE_TRAVEL_SPEED_WATER = 7 # The base speed used when traveling from a water province
+}
+
+NArmy = {
+	FULL_SUPPLY = 200
+	MINIMUM_SUPPLY_LIMIT = 300
+	SUPPLY_GAIN_BELOW_LIMIT = 40
+
+	SUPPLY_STATE_LEVELS = {
+		100
+		70
+		50
+		30
+		20
+		10
+		0
+	}
+
+	SUPPLY_STATE_ATTRITION = {
+		0
+		0.005
+		0.01
+		0.025 #30
+		0.05
+		0.1
+		0.25
+	}
+
+	SUPPLY_STATE_NAMES = {
+		"SUPPLY_STATE_0"
+		"SUPPLY_STATE_1"
+		"SUPPLY_STATE_2"
+		"SUPPLY_STATE_3"
+		"SUPPLY_STATE_4"
+		"SUPPLY_STATE_5"
+		"SUPPLY_STATE_6"
+	}
+}
+
+NProvince = {
+	BASE_SUPPLY_LIMIT = 700 # 70%
+	SUPPLY_PER_DEVELOPMENT = 75 # 50%
+
+	BARONY_BUILDING_SLOTS = 2
+	COUNTY_BUILDING_SLOTS = 3
+}

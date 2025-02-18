@@ -1,0 +1,53 @@
+winter_mild_modifier = {
+	supply_loss_winter = -2
+	provisions_use_mult = 0.1
+	tax_mult = -0.02
+}
+
+winter_normal_modifier = {
+	supply_loss_winter = -5
+	provisions_use_mult = 0.2
+	tax_mult = -0.05
+}
+
+winter_harsh_modifier = {
+	supply_loss_winter = -10
+	provisions_use_mult = 0.4
+	defender_winter_advantage = 5
+	hard_casualty_winter = 0.2
+	tax_mult = -0.15
+}
+
+avalanche_modifier = {
+	icon = county_modifier_development_negative
+	development_growth_factor = -0.1
+	tax_mult = -0.1
+}
+
+banditry_minor_modifier = {
+	icon = county_modifier_development_negative
+	development_growth_factor = -0.1
+	tax_mult = -0.1
+	county_opinion_add = -5
+}
+
+banditry_minor_modifier = {
+	icon = county_modifier_development_negative
+	development_growth_factor = -0.1
+	tax_mult = -0.1
+	county_opinion_add = -5
+}
+
+banditry_major_modifier = {
+	icon = county_modifier_development_negative
+	development_growth_factor = -0.3
+	tax_mult = -0.3
+	county_opinion_add = -15
+}
+
+banditry_takeover_modifier = {
+	icon = county_modifier_development_negative
+	development_growth_factor = -1
+	tax_mult = -1
+	county_opinion_add = -25
+}

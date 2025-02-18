@@ -1,0 +1,6 @@
+infra_disaster_rule = {
+	default = infra_disaster_rule_off
+
+	infra_disaster_rule_off = {}
+	infra_disaster_rule_on = {}
+}

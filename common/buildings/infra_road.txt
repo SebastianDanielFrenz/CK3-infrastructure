@@ -1,0 +1,242 @@
+infra_road_01 = {
+	construction_time = 90
+
+	#can_construct_potential = {root = root}
+	#can_construct_showing_failures_only = {
+		# root is province
+		#root.county.development_level >= 2
+	#	building_requirement_tribal = no
+	#}
+	#can_construct = {
+	#	building_requirement_castle_city_church = { LEVEL = 01 }
+	#}
+
+	type_icon = "icon_building_infra_road.dds"
+
+	cost = {
+		gold = super_expensive_building_tier_1_cost
+	}
+
+	levy = -50
+
+	character_modifier = {
+	}
+
+	province_modifier = {
+		supply_limit_mult = 0.35
+		development_growth_factor = 0.1
+	}
+
+	next_building = infra_road_02
+}
+
+infra_road_02 = {
+	construction_time = 180
+
+	asset = {
+		illustration = @road_illustration
+	}
+
+	cost = {
+		gold = super_expensive_building_tier_2_cost
+	}
+
+	levy = -25
+
+	province_modifier = {
+		build_speed = -0.15
+		build_gold_cost = -0.03
+		tax_mult = 0.15
+		travel_danger = -5
+
+		jungle_supply_limit_mult = 0.03
+		forest_supply_limit_mult = 0.015
+		taiga_supply_limit_mult = 0.015
+		wetlands_supply_limit_mult = 0.015
+
+		supply_limit_mult = 0.55
+
+		levy_reinforcement_rate = 0.05
+		development_growth_factor = 0.25
+	}
+
+	next_building = infra_road_03
+}
+
+infra_road_03 = {
+	construction_time = 360
+
+	type_icon = "icon_building_infra_road.dds"
+
+	cost = {
+		gold = super_expensive_building_tier_3_cost
+	}
+
+	levy = 25
+
+	province_modifier = {
+		tax_mult = 0.275
+		build_speed = -0.25
+		build_gold_cost = -0.075
+		travel_danger = -10
+		
+		jungle_supply_limit_mult = 0.125
+		forest_supply_limit_mult = 0.075
+		taiga_supply_limit_mult = 0.075
+		wetlands_supply_limit_mult = 0.075
+
+		supply_limit_mult = 0.75
+
+		levy_reinforcement_rate = 0.2
+		development_growth_factor = 0.35
+	}
+
+	next_building = infra_road_04
+}
+
+infra_road_04 = {
+	construction_time = 1
+
+	asset = {
+		illustration = @road_illustration
+	}
+
+	cost = {
+		gold = super_expensive_building_tier_4_cost
+	}
+
+	levy = 100
+
+	province_modifier = {
+		tax_mult = 0.35
+		build_speed = -0.38
+		build_gold_cost = -0.1
+		travel_danger = -15
+		
+		jungle_supply_limit_mult = 0.125
+		forest_supply_limit_mult = 0.075
+		taiga_supply_limit_mult = 0.075
+		wetlands_supply_limit_mult = 0.075
+
+		supply_limit_mult = 0.9
+
+		levy_reinforcement_rate = 0.2
+		development_growth_factor = 0.4
+	}
+
+	next_building = infra_road_05
+}
+
+infra_road_05 = {
+	construction_time = 1
+
+	cost = {
+		gold = super_expensive_building_tier_5_cost
+	}
+
+	levy = 225
+
+	province_modifier = {
+		tax_mult = 0.35
+		build_speed = -0.6
+		build_gold_cost = -0.125
+		travel_danger = -25
+		
+		jungle_supply_limit_mult = 0.25
+		forest_supply_limit_mult = 0.15
+		taiga_supply_limit_mult = 0.15
+		wetlands_supply_limit_mult = 0.15
+
+		supply_limit_mult = 1.2
+
+		levy_reinforcement_rate = 0.5
+		development_growth_factor = 0.45
+	}
+
+	next_building = infra_road_06
+}
+
+infra_road_06 = {
+	construction_time = 1
+
+	cost = {
+		gold = super_expensive_building_tier_6_cost
+	}
+
+	levy = 400
+
+	province_modifier = {
+		tax_mult = 0.6
+		build_speed = -0.75
+		build_gold_cost = -0.25
+		travel_danger = -30
+
+		jungle_supply_limit_mult = 0.35
+		forest_supply_limit_mult = 0.25
+		taiga_supply_limit_mult = 0.25
+		wetlands_supply_limit_mult = 0.25
+
+		supply_limit_mult = 1.5
+
+		levy_reinforcement_rate = 0.75
+		development_growth_factor = 0.55
+	}
+
+	next_building = infra_road_07
+}
+
+infra_road_07 = {
+	construction_time = 1
+
+	cost = {
+		gold = super_expensive_building_tier_7_cost
+	}
+
+	levy = 650
+
+	province_modifier = {
+		tax_mult = 0.85
+		build_speed = -0.85
+		build_gold_cost = -0.3
+		travel_danger = -35
+
+		jungle_supply_limit_mult = 0.35
+		forest_supply_limit_mult = 0.25
+		taiga_supply_limit_mult = 0.25
+		wetlands_supply_limit_mult = 0.25
+
+		supply_limit_mult = 1.9
+
+		levy_reinforcement_rate = 1.25
+		development_growth_factor = 0.65
+	}
+
+	next_building = infra_road_08
+}
+
+infra_road_08 = {
+	construction_time = 1
+
+	cost = {
+		gold = super_expensive_building_tier_8_cost
+	}
+
+	levy = 900
+
+	province_modifier = {
+		tax_mult = 1.1
+		build_speed = -0.9
+		build_gold_cost = -0.35
+		travel_danger = -40
+
+		jungle_supply_limit_mult = 0.35
+		forest_supply_limit_mult = 0.25
+		taiga_supply_limit_mult = 0.25
+		wetlands_supply_limit_mult = 0.25
+
+		supply_limit_mult = 3.5
+
+		levy_reinforcement_rate = 2
+		development_growth_factor = 0.75
+	}
+}

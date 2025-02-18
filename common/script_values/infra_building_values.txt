@@ -1,0 +1,22 @@
+@super_expensive_cost_base = 250
+@super_expensive_cost_scale_addition_per_tier = 200
+@building_cost_scaling_modifier_super_expensive = 0.1
+
+
+@super_expensive_cost_tier_1 = @[super_expensive_cost_base] #values progress quadratically for tiers from T3 onwards. The addition at the end is to have nice, round numbers displayed
+@super_expensive_cost_tier_2 = @[super_expensive_cost_tier_1 + super_expensive_cost_scale_addition_per_tier]
+@super_expensive_cost_tier_3 = @[super_expensive_cost_tier_2 + 3*3*super_expensive_cost_scale_addition_per_tier*building_cost_scaling_modifier_super_expensive + 0]
+@super_expensive_cost_tier_4 = @[super_expensive_cost_tier_3 + 4*4*super_expensive_cost_scale_addition_per_tier*building_cost_scaling_modifier_super_expensive + 0]
+@super_expensive_cost_tier_5 = @[super_expensive_cost_tier_4 + 5*5*super_expensive_cost_scale_addition_per_tier*building_cost_scaling_modifier_super_expensive + 0]
+@super_expensive_cost_tier_6 = @[super_expensive_cost_tier_5 + 6*6*super_expensive_cost_scale_addition_per_tier*building_cost_scaling_modifier_super_expensive + 0]
+@super_expensive_cost_tier_7 = @[super_expensive_cost_tier_6 + 7*7*super_expensive_cost_scale_addition_per_tier*building_cost_scaling_modifier_super_expensive + 0]
+@super_expensive_cost_tier_8 = @[super_expensive_cost_tier_7 + 8*8*super_expensive_cost_scale_addition_per_tier*building_cost_scaling_modifier_super_expensive + 0]
+
+super_expensive_building_tier_1_cost = @[super_expensive_cost_tier_1]
+super_expensive_building_tier_2_cost = @[super_expensive_cost_tier_2]
+super_expensive_building_tier_3_cost = @[super_expensive_cost_tier_3]
+super_expensive_building_tier_4_cost = @[super_expensive_cost_tier_4]
+super_expensive_building_tier_5_cost = @[super_expensive_cost_tier_5]
+super_expensive_building_tier_6_cost = @[super_expensive_cost_tier_6]
+super_expensive_building_tier_7_cost = @[super_expensive_cost_tier_7]
+super_expensive_building_tier_8_cost = @[super_expensive_cost_tier_8]
