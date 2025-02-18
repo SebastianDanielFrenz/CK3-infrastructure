@@ -6,14 +6,15 @@ on_game_start_infra_roads = {
 			}
 			save_scope_as = province
 
-			add_province_modifier = extra_building_slot
-
 			if = {
 				limit = {
 					scope:province.county.development_level <= 2
 				}
 			}
 			else = {
+				# building is added in every case; replace lost building slot
+				add_province_modifier = extra_building_slot
+
 				if = {
 					limit = {
 						scope:province.county.development_level <= 5
