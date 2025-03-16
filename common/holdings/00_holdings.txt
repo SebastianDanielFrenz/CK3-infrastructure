@@ -42,6 +42,18 @@
 
 		# custom infra
 		infra_road_01
+		infra_housing_poor_s_01
+		infra_housing_poor_m_01
+		infra_housing_poor_l_01
+		infra_housing_decent_s_01
+		infra_housing_decent_m_01
+		infra_housing_decent_l_01
+		infra_housing_good_s_01
+		infra_housing_good_m_01
+		infra_housing_good_l_01
+		infra_housing_great_s_01
+		infra_housing_great_m_01
+		infra_housing_great_l_01
 	}
 }
 
@@ -62,6 +74,9 @@ tribal_holding = {
 
 		# custom infra
 		infra_road_01
+		infra_housing_poor_s_01
+		infra_housing_poor_m_01
+		# This caps tribes at a population of 128.000 per holding
 	}
 
 	flag = tribal
@@ -108,6 +123,18 @@ city_holding = {
 
 		# custom infra
 		infra_road_01
+		infra_housing_poor_s_01
+		infra_housing_poor_m_01
+		infra_housing_poor_l_01
+		infra_housing_decent_s_01
+		infra_housing_decent_m_01
+		infra_housing_decent_l_01
+		infra_housing_good_s_01
+		infra_housing_good_m_01
+		infra_housing_good_l_01
+		infra_housing_great_s_01
+		infra_housing_great_m_01
+		infra_housing_great_l_01
 	}
 
 	can_be_inherited = yes
@@ -156,6 +183,18 @@ church_holding = {
 
 		# custom infra
 		infra_road_01
+		infra_housing_poor_s_01
+		infra_housing_poor_m_01
+		infra_housing_poor_l_01
+		infra_housing_decent_s_01
+		infra_housing_decent_m_01
+		infra_housing_decent_l_01
+		infra_housing_good_s_01
+		infra_housing_good_m_01
+		infra_housing_good_l_01
+		infra_housing_great_s_01
+		infra_housing_great_m_01
+		infra_housing_great_l_01
 	}
 
 	can_be_inherited = yes

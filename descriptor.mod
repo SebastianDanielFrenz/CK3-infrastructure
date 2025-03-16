@@ -1,6 +1,7 @@
-version="1.0.0"
+version="0.0.2"
 tags={
+	"Balance"
 	"Gameplay"
 }
-name="infra"
-supported_version="1.14.2.2"
+name="Infrastructure"
+supported_version="1.15.0"

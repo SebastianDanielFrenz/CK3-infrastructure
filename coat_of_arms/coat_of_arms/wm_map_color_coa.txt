@@ -1,0 +1,1267 @@
+# Using code from Silk Road mod: https://steamcommunity.com/workshop/filedetails/?id=2493459927
+
+d_line_map_base = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+d_line_map_holy_order = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_special_building = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+d_line_map_dynasty_independent_01 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_independent_02 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_independent_03 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_independent_04 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_independent_05 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_independent_06 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_independent_07 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_independent_08 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+
+d_line_map_dynasty_barony_01 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_barony_02 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_barony_03 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_barony_04 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_barony_05 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_barony_06 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_barony_07 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_barony_08 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+
+d_line_map_dynasty_01 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_02 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_03 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_04 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_05 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_06 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_07 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_08 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+
+d_line_map_dynasty_realm_01 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_realm_02 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_realm_03 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_realm_04 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_realm_05 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_realm_06 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_realm_07 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_realm_08 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+d_line_map_dynasty_special_01 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_special_02 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_special_03 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_special_04 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_special_05 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_special_06 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_special_07 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_dynasty_special_08 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+#### War Maps BEGINS ####
+
+## WEATHER ##
+d_line_map_weather_winter_mild = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_weather_winter_normal = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_weather_winter_harsh = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+###### INFRASTRUCTURE ######
+d_line_map_infra_score_to_0 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_infra_score_to_10 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_infra_score_to_20 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_infra_score_to_30 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_infra_score_to_40 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_infra_score_to_50 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_infra_score_to_60 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_infra_score_to_70 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_infra_score_to_80 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+###### RAIDING ######
+d_line_map_raiding_raided = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_raiding_raided_special = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_raiding_looted = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_raiding_raided_void = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_raiding_raidable = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_special_building_raidable = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+###### RAIDING ######
+d_line_map_fortification_0 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_fortification_1 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_fortification_2 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_fortification_3 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_fortification_4 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_fortification_5 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_fortification_6 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_fortification_7 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_fortification_8 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_fortification_9 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_fortification_10 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_self = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_self_barony = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_self_barony_ally = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_self_liege = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_self_liege_barony = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_allied = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_allied_barony = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_allied_liege = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_allied_liege_barony = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_truce = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_truce_barony = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_truce_alone = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_truce_liege = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_alone = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_alone_barony = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_alone_void = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_alone_liege = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_has_allies = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_has_allies_barony = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_has_allies_liege = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_self = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_0 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_1 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_2 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_3 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_4 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_5 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_6 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_7 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_8 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_9 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_good_10 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_0 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_1 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_2 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_3 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_4 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_5 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_6 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_7 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_8 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_9 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_army_bad_10 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+d_line_map_loot_0 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_1 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_2 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_3 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_4 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_5 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_6 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_7 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_8 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_9 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_10 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+d_line_map_loot_11 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_12 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_13 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_14 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_15 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_16 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_17 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_18 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_19 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_20 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_21 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+d_line_map_loot_22 = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	colored_emblem = {
+		texture = "ce_cross_05_maltese.dds"
+		color1 = "white"
+		color2 = "white"
+	}
+}
+
+#### War Maps ENDS ####

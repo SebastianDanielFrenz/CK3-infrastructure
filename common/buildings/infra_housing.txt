@@ -1,0 +1,825 @@
+# Houses serve as the population model
+# Levels and represented population (1000 * 2^(x-1)):
+# S1: 1000
+# S2: 2000
+# S3: 4000
+# S4: 8000
+# M1: 16000
+# M2: 32000
+# M3: 64000
+# M4: 128000
+# L1: 256000
+# L2: 512000
+# L3: 1024000
+# L4: 2048000
+#
+# Development growth shall increase with the logarithm of the population
+# The levy size should be proportional to the population
+# The cost of the building should be proportional to increase in population over the previous level
+# The construction time should be less the root of the logarthm of the population
+# The supply limit should be proportional to the population
+# The monthly income should be proportional to the population
+#
+# Poor housing should have a base income of 0.05 (1k population)
+# Decent housing should have a base income of x1.3 (0.065)
+# Good housing should have a base income of x1.9 (0.095)
+# Great housing should have a base income of x2.8 (0.14)
+# Housing quality is independent of population
+# Housing quality represents the living standards of the population
+# Construction cost for 1k population for every quality level should be:
+# Poor: 10
+# Medium: 20
+# Good: 40
+# Great: 70
+# This means about 40 years of income for poor housing
+#
+# For every 1000 in population there should be:
+# 1 levy
+# 100 supply limit
+#
+#
+#
+
+
+
+# Poor housing
+infra_housing_poor_s_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_s_01_cost
+	}
+
+	levy = housing_levies_s_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_01
+		monthly_income = poor_housing_s_01_income
+	}
+	
+	next_building = infra_housing_poor_s_02
+}
+infra_housing_poor_s_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_s_02_cost
+	}
+
+	levy = housing_levies_s_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_02
+		monthly_income = poor_housing_s_02_income
+	}
+	
+	next_building = infra_housing_poor_s_03
+}
+infra_housing_poor_s_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_s_03_cost
+	}
+
+	levy = housing_levies_s_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_03
+		monthly_income = poor_housing_s_03_income
+	}
+	
+	next_building = infra_housing_poor_s_04
+}
+infra_housing_poor_s_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_s_04_cost
+	}
+
+	levy = housing_levies_s_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_04
+		monthly_income = poor_housing_s_04_income
+	}
+	# Upgrade to medium size housing only through events
+}
+infra_housing_poor_m_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_m_01_cost
+	}
+
+	levy = housing_levies_m_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_01
+		monthly_income = poor_housing_m_01_income
+	}
+	
+	next_building = infra_housing_poor_m_02
+}
+infra_housing_poor_m_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_m_02_cost
+	}
+
+	levy = housing_levies_m_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_02
+		monthly_income = poor_housing_m_02_income
+	}
+	
+	next_building = infra_housing_poor_m_03
+}
+infra_housing_poor_m_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_m_03_cost
+	}
+
+	levy = housing_levies_m_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_03
+		monthly_income = poor_housing_m_03_income
+	}
+	
+	next_building = infra_housing_poor_m_04
+}
+infra_housing_poor_m_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_m_04_cost
+	}
+
+	levy = housing_levies_m_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_04
+		monthly_income = poor_housing_m_04_income
+	}
+	# Upgrade to large size housing only through events
+}
+infra_housing_poor_l_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_l_01_cost
+	}
+
+	levy = housing_levies_l_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_01
+		monthly_income = poor_housing_l_01_income
+	}
+	
+	next_building = infra_housing_poor_l_02
+}
+infra_housing_poor_l_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_l_02_cost
+	}
+
+	levy = housing_levies_l_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_02
+		monthly_income = poor_housing_l_02_income
+	}
+	
+	next_building = infra_housing_poor_l_03
+}
+infra_housing_poor_l_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_l_03_cost
+	}
+
+	levy = housing_levies_l_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_03
+		monthly_income = poor_housing_l_03_income
+	}
+	
+	next_building = infra_housing_poor_l_04
+}
+infra_housing_poor_l_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = poor_housing_l_04_cost
+	}
+
+	levy = housing_levies_l_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_04
+		monthly_income = poor_housing_l_04_income
+	}
+}
+
+
+########## DECENT HOUSING ##########
+
+
+infra_housing_decent_s_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_s_01_cost
+	}
+
+	levy = housing_levies_s_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_01
+		monthly_income = decent_housing_s_01_income
+	}
+	
+	next_building = infra_housing_decent_s_02
+}
+infra_housing_decent_s_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_s_02_cost
+	}
+
+	levy = housing_levies_s_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_02
+		monthly_income = decent_housing_s_02_income
+	}
+	
+	next_building = infra_housing_decent_s_03
+}
+infra_housing_decent_s_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_s_03_cost
+	}
+
+	levy = housing_levies_s_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_03
+		monthly_income = decent_housing_s_03_income
+	}
+	
+	next_building = infra_housing_decent_s_04
+}
+infra_housing_decent_s_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_s_04_cost
+	}
+
+	levy = housing_levies_s_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_04
+		monthly_income = decent_housing_s_04_income
+	}
+	# Upgrade to medium size housing only through events
+}
+infra_housing_decent_m_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_m_01_cost
+	}
+
+	levy = housing_levies_m_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_01
+		monthly_income = decent_housing_m_01_income
+	}
+	
+	next_building = infra_housing_decent_m_02
+}
+infra_housing_decent_m_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_m_02_cost
+	}
+
+	levy = housing_levies_m_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_02
+		monthly_income = decent_housing_m_02_income
+	}
+	
+	next_building = infra_housing_decent_m_03
+}
+infra_housing_decent_m_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_m_03_cost
+	}
+
+	levy = housing_levies_m_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_03
+		monthly_income = decent_housing_m_03_income
+	}
+	
+	next_building = infra_housing_decent_m_04
+}
+infra_housing_decent_m_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_m_04_cost
+	}
+
+	levy = housing_levies_m_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_04
+		monthly_income = decent_housing_m_04_income
+	}
+	# Upgrade to large size housing only through events
+}
+infra_housing_decent_l_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_l_01_cost
+	}
+
+	levy = housing_levies_l_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_01
+		monthly_income = decent_housing_l_01_income
+	}
+	
+	next_building = infra_housing_decent_l_02
+}
+infra_housing_decent_l_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_l_02_cost
+	}
+
+	levy = housing_levies_l_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_02
+		monthly_income = decent_housing_l_02_income
+	}
+	
+	next_building = infra_housing_decent_l_03
+}
+infra_housing_decent_l_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_l_03_cost
+	}
+
+	levy = housing_levies_l_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_03
+		monthly_income = decent_housing_l_03_income
+	}
+	
+	next_building = infra_housing_decent_l_04
+}
+infra_housing_decent_l_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = decent_housing_l_04_cost
+	}
+
+	levy = housing_levies_l_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_04
+		monthly_income = decent_housing_l_04_income
+	}
+}
+
+
+########## GOOD HOUSING ##########
+
+
+infra_housing_good_s_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_s_01_cost
+	}
+
+	levy = housing_levies_s_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_01
+		monthly_income = good_housing_s_01_income
+	}
+	
+	next_building = infra_housing_good_s_02
+}
+infra_housing_good_s_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_s_02_cost
+	}
+
+	levy = housing_levies_s_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_02
+		monthly_income = good_housing_s_02_income
+	}
+	
+	next_building = infra_housing_good_s_03
+}
+infra_housing_good_s_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_s_03_cost
+	}
+
+	levy = housing_levies_s_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_03
+		monthly_income = good_housing_s_03_income
+	}
+	
+	next_building = infra_housing_good_s_04
+}
+infra_housing_good_s_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_s_04_cost
+	}
+
+	levy = housing_levies_s_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_04
+		monthly_income = good_housing_s_04_income
+	}
+	# Upgrade to medium size housing only through events
+}
+infra_housing_good_m_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_m_01_cost
+	}
+
+	levy = housing_levies_m_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_01
+		monthly_income = good_housing_m_01_income
+	}
+	
+	next_building = infra_housing_good_m_02
+}
+infra_housing_good_m_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_m_02_cost
+	}
+
+	levy = housing_levies_m_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_02
+		monthly_income = good_housing_m_02_income
+	}
+	
+	next_building = infra_housing_good_m_03
+}
+infra_housing_good_m_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_m_03_cost
+	}
+
+	levy = housing_levies_m_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_03
+		monthly_income = good_housing_m_03_income
+	}
+	
+	next_building = infra_housing_good_m_04
+}
+infra_housing_good_m_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_m_04_cost
+	}
+
+	levy = housing_levies_m_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_04
+		monthly_income = good_housing_m_04_income
+	}
+	# Upgrade to large size housing only through events
+}
+infra_housing_good_l_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_l_01_cost
+	}
+
+	levy = housing_levies_l_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_01
+		monthly_income = good_housing_l_01_income
+	}
+	
+	next_building = infra_housing_good_l_02
+}
+infra_housing_good_l_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_l_02_cost
+	}
+
+	levy = housing_levies_l_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_02
+		monthly_income = good_housing_l_02_income
+	}
+	
+	next_building = infra_housing_good_l_03
+}
+infra_housing_good_l_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_l_03_cost
+	}
+
+	levy = housing_levies_l_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_03
+		monthly_income = good_housing_l_03_income
+	}
+	
+	next_building = infra_housing_good_l_04
+}
+infra_housing_good_l_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = good_housing_l_04_cost
+	}
+
+	levy = housing_levies_l_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_04
+		monthly_income = good_housing_l_04_income
+	}
+}
+
+
+########## GREAT HOUSING ##########
+
+
+infra_housing_great_s_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_s_01_cost
+	}
+
+	levy = housing_levies_s_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_01
+		monthly_income = great_housing_s_01_income
+	}
+	
+	next_building = infra_housing_great_s_02
+}
+infra_housing_great_s_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_s_02_cost
+	}
+
+	levy = housing_levies_s_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_02
+		monthly_income = great_housing_s_02_income
+	}
+	
+	next_building = infra_housing_great_s_03
+}
+infra_housing_great_s_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_s_03_cost
+	}
+
+	levy = housing_levies_s_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_03
+		monthly_income = great_housing_s_03_income
+	}
+	
+	next_building = infra_housing_great_s_04
+}
+infra_housing_great_s_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_s_04_cost
+	}
+
+	levy = housing_levies_s_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_s_04
+		monthly_income = great_housing_s_04_income
+	}
+	# Upgrade to medium size housing only through events
+}
+infra_housing_great_m_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_m_01_cost
+	}
+
+	levy = housing_levies_m_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_01
+		monthly_income = great_housing_m_01_income
+	}
+	
+	next_building = infra_housing_great_m_02
+}
+infra_housing_great_m_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_m_02_cost
+	}
+
+	levy = housing_levies_m_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_02
+		monthly_income = great_housing_m_02_income
+	}
+	
+	next_building = infra_housing_great_m_03
+}
+infra_housing_great_m_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_m_03_cost
+	}
+
+	levy = housing_levies_m_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_03
+		monthly_income = great_housing_m_03_income
+	}
+	
+	next_building = infra_housing_great_m_04
+}
+infra_housing_great_m_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_m_04_cost
+	}
+
+	levy = housing_levies_m_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_m_04
+		monthly_income = great_housing_m_04_income
+	}
+	# Upgrade to large size housing only through events
+}
+infra_housing_great_l_01 = {
+	type_icon = "icon_building_infra_housing.dds"
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_l_01_cost
+	}
+
+	levy = housing_levies_l_01
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_01
+		monthly_income = great_housing_l_01_income
+	}
+	
+	next_building = infra_housing_great_l_02
+}
+infra_housing_great_l_02 = {
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_l_02_cost
+	}
+
+	levy = housing_levies_l_02
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_02
+		monthly_income = great_housing_l_02_income
+	}
+	
+	next_building = infra_housing_great_l_03
+}
+infra_housing_great_l_03 = {
+	construction_time = 180
+
+	cost = {
+		gold = great_housing_l_03_cost
+	}
+
+	levy = housing_levies_l_03
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_03
+		monthly_income = great_housing_l_03_income
+	}
+	
+	next_building = infra_housing_great_l_04
+}
+infra_housing_great_l_04 = {
+	construction_time = 180
+
+	cost = {
+		gold = 71680 # This value is too high to be stored in a variable
+		# It seems to be limited to 65535 (2^16 - 1)
+	}
+
+	levy = housing_levies_l_04
+
+	province_modifier = {
+		supply_limit = housing_supply_limit_l_04
+		monthly_income = great_housing_l_04_income
+	}
+}

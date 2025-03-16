@@ -20,3 +20,189 @@ super_expensive_building_tier_5_cost = @[super_expensive_cost_tier_5]
 super_expensive_building_tier_6_cost = @[super_expensive_cost_tier_6]
 super_expensive_building_tier_7_cost = @[super_expensive_cost_tier_7]
 super_expensive_building_tier_8_cost = @[super_expensive_cost_tier_8]
+
+
+
+########## HOUSING BUILD COST ##########
+@poor_housing_cost_base = 10
+@decent_housing_cost_base = 20
+@good_housing_cost_base = 40
+@great_housing_cost_base = 70
+
+# Poor housing
+poor_housing_s_01_cost = @[poor_housing_cost_base]
+poor_housing_s_02_cost = @[poor_housing_cost_base]
+poor_housing_s_03_cost = @[poor_housing_cost_base * 2]
+poor_housing_s_04_cost = @[poor_housing_cost_base * 4]
+
+poor_housing_m_01_cost = @[poor_housing_cost_base * 8]
+poor_housing_m_02_cost = @[poor_housing_cost_base * 16]
+poor_housing_m_03_cost = @[poor_housing_cost_base * 32]
+poor_housing_m_04_cost = @[poor_housing_cost_base * 64]
+
+poor_housing_l_01_cost = @[poor_housing_cost_base * 128]
+poor_housing_l_02_cost = @[poor_housing_cost_base * 256]
+poor_housing_l_03_cost = @[poor_housing_cost_base * 512]
+poor_housing_l_04_cost = @[poor_housing_cost_base * 1024]
+
+# Decent housing
+decent_housing_s_01_cost = @[decent_housing_cost_base]
+decent_housing_s_02_cost = @[decent_housing_cost_base]
+decent_housing_s_03_cost = @[decent_housing_cost_base * 2]
+decent_housing_s_04_cost = @[decent_housing_cost_base * 4]
+
+decent_housing_m_01_cost = @[decent_housing_cost_base * 8]
+decent_housing_m_02_cost = @[decent_housing_cost_base * 16]
+decent_housing_m_03_cost = @[decent_housing_cost_base * 32]
+decent_housing_m_04_cost = @[decent_housing_cost_base * 64]
+
+decent_housing_l_01_cost = @[decent_housing_cost_base * 128]
+decent_housing_l_02_cost = @[decent_housing_cost_base * 256]
+decent_housing_l_03_cost = @[decent_housing_cost_base * 512]
+decent_housing_l_04_cost = @[decent_housing_cost_base * 1024]
+
+# Good housing
+good_housing_s_01_cost = @[good_housing_cost_base]
+good_housing_s_02_cost = @[good_housing_cost_base]
+good_housing_s_03_cost = @[good_housing_cost_base * 2]
+good_housing_s_04_cost = @[good_housing_cost_base * 4]
+
+good_housing_m_01_cost = @[good_housing_cost_base * 8]
+good_housing_m_02_cost = @[good_housing_cost_base * 16]
+good_housing_m_03_cost = @[good_housing_cost_base * 32]
+good_housing_m_04_cost = @[good_housing_cost_base * 64]
+
+good_housing_l_01_cost = @[good_housing_cost_base * 128]
+good_housing_l_02_cost = @[good_housing_cost_base * 256]
+good_housing_l_03_cost = @[good_housing_cost_base * 512]
+good_housing_l_04_cost = @[good_housing_cost_base * 1024]
+
+# Great housing
+great_housing_s_01_cost = @[great_housing_cost_base]
+great_housing_s_02_cost = @[great_housing_cost_base]
+great_housing_s_03_cost = @[great_housing_cost_base * 2]
+great_housing_s_04_cost = @[great_housing_cost_base * 4]
+
+great_housing_m_01_cost = @[great_housing_cost_base * 8]
+great_housing_m_02_cost = @[great_housing_cost_base * 16]
+great_housing_m_03_cost = @[great_housing_cost_base * 32]
+great_housing_m_04_cost = @[great_housing_cost_base * 64]
+
+great_housing_l_01_cost = @[great_housing_cost_base * 128]
+great_housing_l_02_cost = @[great_housing_cost_base * 256]
+great_housing_l_03_cost = @[great_housing_cost_base * 512]
+# For some reason, this number seems to be too high
+# It cannot be stored in a script value
+# Seems to be capped at 65535 (2^16 - 1)
+
+#great_housing_l_04_cost = @[great_housing_cost_base * 1024]
+#great_housing_l_04_cost = 71680
+
+
+########## HOUSING INCOME ##########
+@poor_housing_income_base = 0.05
+@decent_housing_income_base = @[poor_housing_income_base * 1.3]
+@good_housing_income_base = @[decent_housing_income_base * 1.3]
+@great_housing_income_base = @[good_housing_income_base * 1.3]
+
+# Poor housing
+poor_housing_s_01_income = @[poor_housing_income_base]
+poor_housing_s_02_income = @[poor_housing_income_base * 2]
+poor_housing_s_03_income = @[poor_housing_income_base * 4]
+poor_housing_s_04_income = @[poor_housing_income_base * 8]
+
+poor_housing_m_01_income = @[poor_housing_income_base * 16]
+poor_housing_m_02_income = @[poor_housing_income_base * 32]
+poor_housing_m_03_income = @[poor_housing_income_base * 64]
+poor_housing_m_04_income = @[poor_housing_income_base * 128]
+
+poor_housing_l_01_income = @[poor_housing_income_base * 256]
+poor_housing_l_02_income = @[poor_housing_income_base * 512]
+poor_housing_l_03_income = @[poor_housing_income_base * 1024]
+poor_housing_l_04_income = @[poor_housing_income_base * 2048]
+
+# Decent housing
+decent_housing_s_01_income = @[decent_housing_income_base]
+decent_housing_s_02_income = @[decent_housing_income_base * 2]
+decent_housing_s_03_income = @[decent_housing_income_base * 4]
+decent_housing_s_04_income = @[decent_housing_income_base * 8]
+
+decent_housing_m_01_income = @[decent_housing_income_base * 16]
+decent_housing_m_02_income = @[decent_housing_income_base * 32]
+decent_housing_m_03_income = @[decent_housing_income_base * 64]
+decent_housing_m_04_income = @[decent_housing_income_base * 128]
+
+decent_housing_l_01_income = @[decent_housing_income_base * 256]
+decent_housing_l_02_income = @[decent_housing_income_base * 512]
+decent_housing_l_03_income = @[decent_housing_income_base * 1024]
+decent_housing_l_04_income = @[decent_housing_income_base * 2048]
+
+# Good housing
+good_housing_s_01_income = @[good_housing_income_base]
+good_housing_s_02_income = @[good_housing_income_base * 2]
+good_housing_s_03_income = @[good_housing_income_base * 4]
+good_housing_s_04_income = @[good_housing_income_base * 8]
+
+good_housing_m_01_income = @[good_housing_income_base * 16]
+good_housing_m_02_income = @[good_housing_income_base * 32]
+good_housing_m_03_income = @[good_housing_income_base * 64]
+good_housing_m_04_income = @[good_housing_income_base * 128]
+
+good_housing_l_01_income = @[good_housing_income_base * 256]
+good_housing_l_02_income = @[good_housing_income_base * 512]
+good_housing_l_03_income = @[good_housing_income_base * 1024]
+good_housing_l_04_income = @[good_housing_income_base * 2048]
+
+# Great housing
+great_housing_s_01_income = @[great_housing_income_base]
+great_housing_s_02_income = @[great_housing_income_base * 2]
+great_housing_s_03_income = @[great_housing_income_base * 4]
+great_housing_s_04_income = @[great_housing_income_base * 8]
+
+great_housing_m_01_income = @[great_housing_income_base * 16]
+great_housing_m_02_income = @[great_housing_income_base * 32]
+great_housing_m_03_income = @[great_housing_income_base * 64]
+great_housing_m_04_income = @[great_housing_income_base * 128]
+
+great_housing_l_01_income = @[great_housing_income_base * 256]
+great_housing_l_02_income = @[great_housing_income_base * 512]
+great_housing_l_03_income = @[great_housing_income_base * 1024]
+great_housing_l_04_income = @[great_housing_income_base * 2048]
+
+
+########## HOUSING SUPPLY LIMIT ##########
+@housing_supply_limit_base = 10 # for 1k population
+
+housing_supply_limit_s_01 = @[housing_supply_limit_base]
+housing_supply_limit_s_02 = @[housing_supply_limit_base * 2]
+housing_supply_limit_s_03 = @[housing_supply_limit_base * 4]
+housing_supply_limit_s_04 = @[housing_supply_limit_base * 8]
+
+housing_supply_limit_m_01 = @[housing_supply_limit_base * 16]
+housing_supply_limit_m_02 = @[housing_supply_limit_base * 32]
+housing_supply_limit_m_03 = @[housing_supply_limit_base * 64]
+housing_supply_limit_m_04 = @[housing_supply_limit_base * 128]
+
+housing_supply_limit_l_01 = @[housing_supply_limit_base * 256]
+housing_supply_limit_l_02 = @[housing_supply_limit_base * 512]
+housing_supply_limit_l_03 = @[housing_supply_limit_base * 1024]
+housing_supply_limit_l_04 = @[housing_supply_limit_base * 2048]
+
+
+########## HOUSING LEVIES ##########
+@housing_levies_base = 1 # for 1k population
+
+housing_levies_s_01 = @[housing_levies_base]
+housing_levies_s_02 = @[housing_levies_base * 2]
+housing_levies_s_03 = @[housing_levies_base * 4]
+housing_levies_s_04 = @[housing_levies_base * 8]
+
+housing_levies_m_01 = @[housing_levies_base * 16]
+housing_levies_m_02 = @[housing_levies_base * 32]
+housing_levies_m_03 = @[housing_levies_base * 64]
+housing_levies_m_04 = @[housing_levies_base * 128]
+
+housing_levies_l_01 = @[housing_levies_base * 256]
+housing_levies_l_02 = @[housing_levies_base * 512]
+housing_levies_l_03 = @[housing_levies_base * 1024]
+housing_levies_l_04 = @[housing_levies_base * 2048]

@@ -1,0 +1,220 @@
+line_mapping_infra_map = {
+	
+	every_barony = {
+		save_scope_as = current_barony
+
+		set_variable = {
+			name = infra_score
+			value = 0
+		}
+
+		set_variable = {
+			name = inspect_province
+			value = title_province
+		}
+
+		if = {
+			limit = {
+				title_province = {
+					has_holding = no
+				}
+			}
+
+			set_variable = {
+				name = inspect_province
+				value = province:3
+			}
+			
+			#remove_variable = inspect_province
+			
+			#set_variable = {
+			#	name = inspect_province
+			#	#value = province:4827.county.county_capital
+			#	value = title_province.county.county_capital
+			#}
+			# Loop through all provinces in the county
+
+			#province:4827 = {
+			#	save_scope_as = found_capital
+			#	current_barony = {
+			#		set_variable = {
+			#			name = inspect_province
+			#			value = province:4827
+			#		}
+			#	}
+			#}
+
+			#c_roma = {
+			#	every_county_province = {
+			#		if = {
+			#			limit = {
+			#				is_capital_barony = yes
+			#			}
+			#			save_scope_as = found_capital
+			#			set_variable = {
+			#				name = inspect_province
+			#				#value = scope:found_capital
+			#				value = province:4827
+			#			}
+			#		}
+			#	}
+			#}
+		}
+
+		# Add infra score based on the level of the road
+		if = {
+			limit = {
+				var:inspect_province = { has_building = infra_road_01 }
+			}
+			change_variable = {
+				name = infra_score
+				add = 10
+			}
+		}
+		if = {
+			limit = {
+				var:inspect_province = { has_building = infra_road_02 }
+			}
+			change_variable = {
+				name = infra_score
+				add = 20
+			}
+		}
+		if = {
+			limit = {
+				var:inspect_province = { has_building = infra_road_03 }
+			}
+			change_variable = {
+				name = infra_score
+				add = 30
+			}
+		}
+		if = {
+			limit = {
+				var:inspect_province = { has_building = infra_road_04 }
+			}
+			change_variable = {
+				name = infra_score
+				add = 40
+			}
+		}
+		if = {
+			limit = {
+				var:inspect_province = { has_building = infra_road_05 }
+			}
+			change_variable = {
+				name = infra_score
+				add = 50
+			}
+		}
+		if = {
+			limit = {
+				var:inspect_province = { has_building = infra_road_06 }
+			}
+			change_variable = {
+				name = infra_score
+				add = 60
+			}
+		}
+		if = {
+			limit = {
+				var:inspect_province = { has_building = infra_road_07 }
+			}
+			change_variable = {
+				name = infra_score
+				add = 70
+			}
+		}
+		if = {
+			limit = {
+				var:inspect_province = { has_building = infra_road_08 }
+			}
+			change_variable = {
+				name = infra_score
+				add = 80
+			}
+		}
+		
+
+		
+
+		# Add infra score based on the level of the XXX (to be implemented)
+
+		# Set color based on infra score
+		# First, set base color
+
+		# Now place higher
+		#if = {
+		#	limit = {
+		#		var:infra_score = 0
+		#	}
+		#	set_color_from_title = title:d_line_map_infra_score_to_0
+		#}
+		if = {
+			limit = {
+				var:infra_score < 1
+			}
+			set_color_from_title = title:d_line_map_infra_score_to_0
+		}
+		if = {
+			limit = {
+				var:infra_score > 0
+				var:infra_score <= 10
+			}
+			set_color_from_title = title:d_line_map_infra_score_to_10
+		}
+		if = {
+			limit = {
+				var:infra_score > 10
+				var:infra_score <= 20
+			}
+			set_color_from_title = title:d_line_map_infra_score_to_20
+		}
+		if = {
+			limit = {
+				var:infra_score > 20
+				var:infra_score <= 30
+			}
+			set_color_from_title = title:d_line_map_infra_score_to_30
+		}
+		if = {
+			limit = {
+				var:infra_score > 30
+				var:infra_score <= 40
+			}
+			set_color_from_title = title:d_line_map_infra_score_to_40
+		}
+		if = {
+			limit = {
+				var:infra_score > 40
+				var:infra_score <= 50
+			}
+			set_color_from_title = title:d_line_map_infra_score_to_50
+		}
+		if = {
+			limit = {
+				var:infra_score > 50
+				var:infra_score <= 60
+			}
+			set_color_from_title = title:d_line_map_infra_score_to_60
+		}
+		if = {
+			limit = {
+				var:infra_score > 60
+				var:infra_score <= 70
+			}
+			set_color_from_title = title:d_line_map_infra_score_to_70
+		}
+		if = {
+			limit = {
+				var:infra_score > 70
+				var:infra_score <= 80
+			}
+			set_color_from_title = title:d_line_map_infra_score_to_80
+		}
+
+		# Cleanup
+		remove_variable = infra_score
+
+	}
+}

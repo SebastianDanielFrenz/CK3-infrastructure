@@ -3,6 +3,12 @@ namespace = dev
 dev.0001 = {
     left_portrait = root
 
+    immediate = {
+        province:4827 = {
+            save_scope_as = inspect_province
+        }
+    }
+
     option = {
         name = dev.0001.a
     }

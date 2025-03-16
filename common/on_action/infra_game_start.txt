@@ -6,6 +6,219 @@ on_game_start_infra_roads = {
 			}
 			save_scope_as = province
 
+			# Build housing
+
+			if = {
+				limit = {
+					NOT = {
+						holder = {
+							has_government = government_tribal
+						}
+					}
+				}
+				# building is added in every case; replace lost building slot
+				add_province_modifier = extra_building_slot
+
+				# is capital of a realm?
+				set_variable = {
+					name = population_score_for_current_province
+					value = {
+						add = 1
+
+						if = {
+							limit = {
+								is_county_capital = yes
+							}
+							add = 2
+						}
+						if = {
+							limit = {
+								is_coastal = yes
+							}
+							add = 1.5
+						}
+						else = {
+							if = {
+								limit = {
+									is_riverside_province = yes
+								}
+								add = 1
+							}
+						}
+						if = {
+							limit = {
+								county = {
+									is_coastal_county = yes
+								}
+							}
+							add = 0.5
+						}
+						# terrain
+						if = {
+							limit = {
+								terrain = farmlands
+							}
+							add = 2
+						}
+						if = {
+							limit = {
+								terrain = floodplains
+							}
+							add = 1.5
+						}
+						if = {
+							limit = {
+								terrain = hills
+							}
+							add = -1.5
+						}
+						if = {
+							limit = {
+								terrain = mountains
+							}
+							add = -1
+						}
+						# holding type
+						if = {
+							limit = {
+								has_building_or_higher = castle_05
+							}
+							add = 2
+						}
+						if = {
+							limit = {
+								scope:province.county.development_level >= 2
+							}
+							add = 0.5
+						}
+						if = {
+							limit = {
+								scope:province.county.development_level >= 5
+							}
+							add = 0.5
+						}
+						if = {
+							limit = {
+								scope:province.county.development_level >= 9
+							}
+							add = 0.5
+						}
+						if = {
+							limit = {
+								scope:province.county.development_level >= 14
+							}
+							add = 0.5
+						}
+						if = {
+							limit = {
+								scope:province.county.development_level >= 20
+							}
+							add = 0.5
+						}
+						if = {
+							limit = {
+								scope:province.county.development_level >= 27
+							}
+							add = 0.5
+						}
+						if = {
+							limit = {
+								scope:province.county.development_level >= 35
+							}
+							add = 0.5
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						var:population_score_for_current_province < 1
+					}
+					add_building = infra_housing_poor_s_01
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 1
+						var:population_score_for_current_province < 2
+					}
+					add_building = infra_housing_poor_s_02
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 2
+						var:population_score_for_current_province < 3
+					}
+					add_building = infra_housing_poor_s_03
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 3
+						var:population_score_for_current_province < 4
+					}
+					add_building = infra_housing_poor_s_04
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 4
+						var:population_score_for_current_province < 5
+					}
+					if = {
+						scope:province.county.development_level < 1
+					}
+					add_building = infra_housing_poor_m_01
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 5
+						var:population_score_for_current_province < 6
+					}
+					add_building = infra_housing_poor_m_02
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 6
+						var:population_score_for_current_province < 7
+					}
+					add_building = infra_housing_poor_m_03
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 7
+						var:population_score_for_current_province < 8
+					}
+					add_building = infra_housing_poor_m_04
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 8
+						var:population_score_for_current_province < 9
+					}
+					add_building = infra_housing_decent_l_01
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 9
+						var:population_score_for_current_province < 10
+					}
+					add_building = infra_housing_decent_l_02
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 10
+						var:population_score_for_current_province < 11
+					}
+					add_building = infra_housing_decent_l_03
+				}
+				if = {
+					limit = {
+						var:population_score_for_current_province >= 11
+					}
+					add_building = infra_housing_decent_l_04
+				}
+			}
+
+			# Build roads
+
 			if = {
 				limit = {
 					scope:province.county.development_level <= 2
@@ -66,6 +279,7 @@ on_game_start_infra_roads = {
 				}
 			}
 		}
+		# Baghdad
 		province:4828 = {
 			remove_building = infra_road_01
 			remove_building = infra_road_02
@@ -76,6 +290,130 @@ on_game_start_infra_roads = {
 			remove_building = infra_road_07
 			remove_building = infra_road_08
 			add_building = infra_road_07
+
+			remove_building = infra_housing_poor_s_01
+			remove_building = infra_housing_poor_s_02
+			remove_building = infra_housing_poor_s_03
+			remove_building = infra_housing_poor_s_04
+			remove_building = infra_housing_poor_m_01
+			remove_building = infra_housing_poor_m_02
+			remove_building = infra_housing_poor_m_03
+			remove_building = infra_housing_poor_m_04
+			remove_building = infra_housing_decent_s_01
+			remove_building = infra_housing_decent_s_02
+			remove_building = infra_housing_decent_s_03
+			remove_building = infra_housing_decent_s_04
+			remove_building = infra_housing_decent_m_01
+			remove_building = infra_housing_decent_m_02
+			remove_building = infra_housing_decent_m_03
+			remove_building = infra_housing_decent_m_04
+			remove_building = infra_housing_decent_l_01
+			remove_building = infra_housing_decent_l_02
+			remove_building = infra_housing_decent_l_03
+			remove_building = infra_housing_decent_l_04
+			add_building = infra_housing_decent_l_03 # 1 million pop
+		}
+		# Rome
+		province:2575 = {
+			remove_building = infra_road_01
+			remove_building = infra_road_02
+			remove_building = infra_road_03
+			remove_building = infra_road_04
+			remove_building = infra_road_05
+			remove_building = infra_road_06
+			remove_building = infra_road_07
+			remove_building = infra_road_08
+			add_building = infra_road_06
+
+			remove_building = infra_housing_poor_s_01
+			remove_building = infra_housing_poor_s_02
+			remove_building = infra_housing_poor_s_03
+			remove_building = infra_housing_poor_s_04
+			remove_building = infra_housing_poor_m_01
+			remove_building = infra_housing_poor_m_02
+			remove_building = infra_housing_poor_m_03
+			remove_building = infra_housing_poor_m_04
+			remove_building = infra_housing_decent_s_01
+			remove_building = infra_housing_decent_s_02
+			remove_building = infra_housing_decent_s_03
+			remove_building = infra_housing_decent_s_04
+			remove_building = infra_housing_decent_m_01
+			remove_building = infra_housing_decent_m_02
+			remove_building = infra_housing_decent_m_03
+			remove_building = infra_housing_decent_m_04
+			remove_building = infra_housing_decent_l_01
+			remove_building = infra_housing_decent_l_02
+			remove_building = infra_housing_decent_l_03
+			remove_building = infra_housing_decent_l_04
+			add_building = infra_housing_decent_m_02 # 32k pop
+		}
+		# Constantinople
+		province:496 = {
+			remove_building = infra_road_01
+			remove_building = infra_road_02
+			remove_building = infra_road_03
+			remove_building = infra_road_04
+			remove_building = infra_road_05
+			remove_building = infra_road_06
+			remove_building = infra_road_07
+			remove_building = infra_road_08
+			add_building = infra_road_06
+
+			remove_building = infra_housing_poor_s_01
+			remove_building = infra_housing_poor_s_02
+			remove_building = infra_housing_poor_s_03
+			remove_building = infra_housing_poor_s_04
+			remove_building = infra_housing_poor_m_01
+			remove_building = infra_housing_poor_m_02
+			remove_building = infra_housing_poor_m_03
+			remove_building = infra_housing_poor_m_04
+			remove_building = infra_housing_decent_s_01
+			remove_building = infra_housing_decent_s_02
+			remove_building = infra_housing_decent_s_03
+			remove_building = infra_housing_decent_s_04
+			remove_building = infra_housing_decent_m_01
+			remove_building = infra_housing_decent_m_02
+			remove_building = infra_housing_decent_m_03
+			remove_building = infra_housing_decent_m_04
+			remove_building = infra_housing_decent_l_01
+			remove_building = infra_housing_decent_l_02
+			remove_building = infra_housing_decent_l_03
+			remove_building = infra_housing_decent_l_04
+			add_building = infra_housing_decent_l_02 # 0,5 million pop
+		}
+		# Cordoba
+		province:1995 = {
+			remove_building = infra_road_01
+			remove_building = infra_road_02
+			remove_building = infra_road_03
+			remove_building = infra_road_04
+			remove_building = infra_road_05
+			remove_building = infra_road_06
+			remove_building = infra_road_07
+			remove_building = infra_road_08
+			add_building = infra_road_05
+
+			remove_building = infra_housing_poor_s_01
+			remove_building = infra_housing_poor_s_02
+			remove_building = infra_housing_poor_s_03
+			remove_building = infra_housing_poor_s_04
+			remove_building = infra_housing_poor_m_01
+			remove_building = infra_housing_poor_m_02
+			remove_building = infra_housing_poor_m_03
+			remove_building = infra_housing_poor_m_04
+			remove_building = infra_housing_decent_s_01
+			remove_building = infra_housing_decent_s_02
+			remove_building = infra_housing_decent_s_03
+			remove_building = infra_housing_decent_s_04
+			remove_building = infra_housing_decent_m_01
+			remove_building = infra_housing_decent_m_02
+			remove_building = infra_housing_decent_m_03
+			remove_building = infra_housing_decent_m_04
+			remove_building = infra_housing_decent_l_01
+			remove_building = infra_housing_decent_l_02
+			remove_building = infra_housing_decent_l_03
+			remove_building = infra_housing_decent_l_04
+			add_building = infra_housing_decent_l_01 # 256k pop
 		}
 	}
 }

@@ -1,0 +1,5 @@
+line_infra_map = {
+	effect = {
+		line_mapping_infra_map = yes
+	}
+}
