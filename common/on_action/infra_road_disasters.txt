@@ -46,3 +46,15 @@ quarterly_playable_pulse = {
 		infra_banditry_quarterly_pulse
 	}
 }
+
+infra_population_pulse = {
+	effect = {
+		trigger_event = population_change.0001
+	}
+}
+
+five_year_playable_pulse = {
+	on_actions = {
+		infra_population_pulse
+	}
+}

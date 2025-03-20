@@ -51,3 +51,89 @@ banditry_takeover_modifier = {
 	tax_mult = -1
 	county_opinion_add = -25
 }
+
+population_boom_1_modifier = {
+	icon = family_positive
+	development_growth_factor = 0.1
+	tax_mult = 0.25
+}
+
+population_boom_2_modifier = {
+	icon = family_positive
+	development_growth_factor = 0.2
+	tax_mult = 0.5
+}
+
+population_boom_3_modifier = {
+	icon = family_positive
+	development_growth_factor = 0.03
+	tax_mult = 0.2
+}
+
+population_boom_4_modifier = {
+	icon = family_positive
+	development_growth_factor = -0.5
+	tax_mult = 0.1
+}
+
+population_shortfall_1_modifier = {
+	# x0.75 (25% missing)
+	icon = family_negative
+	development_growth_factor = -0.15
+	tax_mult = -0.1
+}
+
+population_shortfall_2_modifier = {
+	# x0.5 (50% missing)
+	icon = family_negative
+	development_growth_factor = -0.4
+	tax_mult = -0.25
+}
+
+population_shortfall_3_modifier = {
+	# x0.3 (62% missing)
+	icon = family_negative
+	development_growth_factor = -0.5
+	tax_mult = -0.5
+}
+
+population_shortfall_4_modifier = {
+	# x0.25 (75% missing)
+	icon = family_negative
+	development_growth_factor = -0.65
+	tax_mult = -0.75
+}
+
+population_shortfall_5_modifier = {
+	# x0.1 (90% missing)
+	icon = family_negative
+	development_growth_factor = -0.8
+	tax_mult = -0.9
+}
+
+slum_1_modifier = {
+	icon = cockroach_negative
+	development_growth_factor = -0.3
+	tax_mult = -0.15
+	danger = 10
+}
+
+slum_2_modifier = {
+	icon = cockroach_negative
+	development_growth_factor = -0.5
+	tax_mult = -0.25
+	danger = 30
+}
+
+slum_3_modifier = {
+	icon = cockroach_negative
+	development_growth_factor = -0.8
+	tax_mult = -0.4
+	danger = 50
+}
+
+slum_removal_works_modifier = {
+	icon = cockroach_positive
+	development_growth_factor = 0.2
+	tax_mult = -0.25
+}

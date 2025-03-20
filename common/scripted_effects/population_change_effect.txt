@@ -1,0 +1,1040 @@
+upgrade_slum = {
+	if = {
+		limit = {
+			has_province_modifier = slum_3_modifier
+		}
+		# nothing happens
+	}
+	else = {
+		if = {
+			limit = {
+				has_province_modifier = slum_2_modifier
+			}
+			remove_province_modifier = slum_2_modifier
+			add_province_modifier = slum_3_modifier
+		}
+		else = {
+			if = {
+				limit = {
+					has_province_modifier = slum_1_modifier
+				}
+				remove_province_modifier = slum_1_modifier
+				add_province_modifier = slum_2_modifier
+			}
+			else = {
+				add_province_modifier = slum_1_modifier
+			}
+		}
+	}
+}
+
+upgrade_poor_housing_effect = {
+	# upgrade
+	remove_province_modifier = population_boom_2_modifier
+	#add_province_modifier = population_shortfall_1_modifier
+	if = {
+		limit = {
+			has_building = infra_housing_poor_l_03
+		}
+		remove_building = infra_housing_poor_l_03
+		add_building = infra_housing_poor_l_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_poor_l_02
+		}
+		remove_building = infra_housing_poor_l_02
+		add_building = infra_housing_poor_l_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_poor_l_01
+		}
+		remove_building = infra_housing_poor_l_01
+		add_building = infra_housing_poor_l_02
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_poor_m_04
+		}
+		remove_building = infra_housing_poor_m_04
+		add_building = infra_housing_poor_l_01
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_poor_m_03
+		}
+		remove_building = infra_housing_poor_m_03
+		add_building = infra_housing_poor_m_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_poor_m_02
+		}
+		remove_building = infra_housing_poor_m_02
+		add_building = infra_housing_poor_m_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_poor_m_01
+		}
+		remove_building = infra_housing_poor_m_01
+		add_building = infra_housing_poor_m_02
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_poor_s_04
+		}
+		remove_building = infra_housing_poor_s_04
+		add_building = infra_housing_poor_m_01
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_poor_s_03
+		}
+		remove_building = infra_housing_poor_s_03
+		add_building = infra_housing_poor_s_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_poor_s_02
+		}
+		remove_building = infra_housing_poor_s_02
+		add_building = infra_housing_poor_s_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_poor_s_01
+		}
+		remove_building = infra_housing_poor_s_01
+		add_building = infra_housing_poor_s_02
+	}
+}
+
+expand_poor_housing_population_effect = {
+	if = {
+		limit = {
+			has_province_modifier = population_boom_1_modifier
+		}
+		# give boom 2
+		remove_province_modifier = population_boom_1_modifier
+		add_province_modifier = population_boom_2_modifier
+	}
+	else = {
+		if = {
+			limit = {
+				has_province_modifier = population_boom_2_modifier
+			}
+			# give boom 2 + slum 1 OR upgrade
+			random_list = {
+				1 = {
+					# give boom 2 + slum 1
+					upgrade_slum = yes
+					custom_label = {
+						text = "slum_upgrade"
+					}
+				}
+				1 = {
+					custom_label = {
+						text = "town_upgrade"
+					}
+					upgrade_poor_housing_effect = yes
+				}
+			}
+		}
+		else = {
+			# must be no boom modifier (poor does not get boom 3)
+			# give boom 1
+			add_province_modifier = population_boom_1_modifier
+		}
+	}
+}
+
+upgrade_decent_housing_effect = {
+	
+	if = {
+		limit = {
+			has_building = infra_housing_decent_l_03
+		}
+		remove_building = infra_housing_decent_l_03
+		add_building = infra_housing_decent_l_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_decent_l_02
+		}
+		remove_building = infra_housing_decent_l_02
+		add_building = infra_housing_decent_l_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_decent_l_01
+		}
+		remove_building = infra_housing_decent_l_01
+		add_building = infra_housing_decent_l_02
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_decent_m_04
+		}
+		remove_building = infra_housing_decent_m_04
+		add_building = infra_housing_decent_l_01
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_decent_m_03
+		}
+		remove_building = infra_housing_decent_m_03
+		add_building = infra_housing_decent_m_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_decent_m_02
+		}
+		remove_building = infra_housing_decent_m_02
+		add_building = infra_housing_decent_m_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_decent_m_01
+		}
+		remove_building = infra_housing_decent_m_01
+		add_building = infra_housing_decent_m_02
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_decent_s_04
+		}
+		remove_building = infra_housing_decent_s_04
+		add_building = infra_housing_decent_m_01
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_decent_s_03
+		}
+		remove_building = infra_housing_decent_s_03
+		add_building = infra_housing_decent_s_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_decent_s_02
+		}
+		remove_building = infra_housing_decent_s_02
+		add_building = infra_housing_decent_s_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_decent_s_01
+		}
+		remove_building = infra_housing_decent_s_01
+		add_building = infra_housing_decent_s_02
+	}
+}
+
+expand_decent_housing_population_effect = {
+	if = {
+		limit = {
+			has_province_modifier = population_boom_1_modifier
+		}
+		# give boom 2
+		remove_province_modifier = population_boom_1_modifier
+		add_province_modifier = population_boom_2_modifier
+	}
+	else = {
+		if = {
+			limit = {
+				has_province_modifier = population_boom_2_modifier
+			}
+			# give boom 3
+			remove_province_modifier = population_boom_2_modifier
+			add_province_modifier = population_boom_3_modifier
+		}
+		else = {
+			if = {
+				limit = {
+					has_province_modifier = population_boom_3_modifier
+				}
+				# give boom 3 + slum 1 OR upgrade
+				random_list = {
+					1 = {
+						# give boom 3 + slum 1
+						upgrade_slum = yes
+					}
+					1 = {
+						# upgrade
+						remove_province_modifier = population_boom_3_modifier
+						upgrade_decent_housing_effect = yes
+					}
+				}
+			}
+			else = {
+				# must be no boom modifier (decent does not get boom 4)
+				# give boom 1
+				add_province_modifier = population_boom_1_modifier
+			}
+		}
+	}
+}
+
+upgrade_good_housing_effect = {
+	if = {
+		limit = {
+			has_building = infra_housing_good_l_03
+		}
+		remove_building = infra_housing_good_l_03
+		add_building = infra_housing_good_l_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_good_l_02
+		}
+		remove_building = infra_housing_good_l_02
+		add_building = infra_housing_good_l_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_good_l_01
+		}
+		remove_building = infra_housing_good_l_01
+		add_building = infra_housing_good_l_02
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_good_m_04
+		}
+		remove_building = infra_housing_good_m_04
+		add_building = infra_housing_good_l_01
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_good_m_03
+		}
+		remove_building = infra_housing_good_m_03
+		add_building = infra_housing_good_m_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_good_m_02
+		}
+		remove_building = infra_housing_good_m_02
+		add_building = infra_housing_good_m_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_good_m_01
+		}
+		remove_building = infra_housing_good_m_01
+		add_building = infra_housing_good_m_02
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_good_s_04
+		}
+		remove_building = infra_housing_good_s_04
+		add_building = infra_housing_good_m_01
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_good_s_03
+		}
+		remove_building = infra_housing_good_s_03
+		add_building = infra_housing_good_s_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_good_s_02
+		}
+		remove_building = infra_housing_good_s_02
+		add_building = infra_housing_good_s_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_good_s_01
+		}
+		remove_building = infra_housing_good_s_01
+		add_building = infra_housing_good_s_02
+	}
+}
+
+expand_good_housing_population_effect = {
+	if = {
+		limit = {
+			has_province_modifier = population_boom_1_modifier
+		}
+		# give boom 2
+		remove_province_modifier = population_boom_1_modifier
+		add_province_modifier = population_boom_2_modifier
+	}
+	else = {
+		if = {
+			limit = {
+				has_province_modifier = population_boom_2_modifier
+			}
+			# give boom 3
+			remove_province_modifier = population_boom_2_modifier
+			add_province_modifier = population_boom_3_modifier
+		}
+		else = {
+			if = {
+				limit = {
+					has_province_modifier = population_boom_3_modifier
+				}
+				# give boom 4
+				remove_province_modifier = population_boom_3_modifier
+				add_province_modifier = population_boom_4_modifier
+			}
+			else = {
+				if = {
+					limit = {
+						has_province_modifier = population_boom_4_modifier
+					}
+					# give boom 4 + slum 1 OR upgrade
+					random_list = {
+						1 = {
+							# give boom 4 + slum 1
+							upgrade_slum = yes
+						}
+						1 = {
+							# upgrade
+							remove_province_modifier = population_boom_4_modifier
+							upgrade_good_housing_effect = yes
+						}
+					}
+				}
+				else = {
+					# must be no boom modifier (good does not get boom 5)
+					# give boom 1
+					add_province_modifier = population_boom_1_modifier
+				}
+			}
+		}
+	}
+}
+
+upgrade_great_housing_effect = {
+	if = {
+		limit = {
+			has_building = infra_housing_great_l_03
+		}
+		remove_building = infra_housing_great_l_03
+		add_building = infra_housing_great_l_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_great_l_02
+		}
+		remove_building = infra_housing_great_l_02
+		add_building = infra_housing_great_l_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_great_l_01
+		}
+		remove_building = infra_housing_great_l_01
+		add_building = infra_housing_great_l_02
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_great_m_04
+		}
+		remove_building = infra_housing_great_m_04
+		add_building = infra_housing_great_l_01
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_great_m_03
+		}
+		remove_building = infra_housing_great_m_03
+		add_building = infra_housing_great_m_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_great_m_02
+		}
+		remove_building = infra_housing_great_m_02
+		add_building = infra_housing_great_m_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_great_m_01
+		}
+		remove_building = infra_housing_great_m_01
+		add_building = infra_housing_great_m_02
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_great_s_04
+		}
+		remove_building = infra_housing_great_s_04
+		add_building = infra_housing_great_m_01
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_great_s_03
+		}
+		remove_building = infra_housing_great_s_03
+		add_building = infra_housing_great_s_04
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_great_s_02
+		}
+		remove_building = infra_housing_great_s_02
+		add_building = infra_housing_great_s_03
+	}
+	if = {
+		limit = {
+			has_building = infra_housing_great_s_01
+		}
+		remove_building = infra_housing_great_s_01
+		add_building = infra_housing_great_s_02
+	}
+}
+
+expand_great_housing_population_effect = {
+	if = {
+		limit = {
+			has_province_modifier = population_boom_1_modifier
+		}
+		# give boom 2
+		remove_province_modifier = population_boom_1_modifier
+		add_province_modifier = population_boom_2_modifier
+	}
+	else = {
+		if = {
+			limit = {
+				has_province_modifier = population_boom_2_modifier
+			}
+			# give boom 3
+			remove_province_modifier = population_boom_2_modifier
+			add_province_modifier = population_boom_3_modifier
+		}
+		else = {
+			if = {
+				limit = {
+					has_province_modifier = population_boom_3_modifier
+				}
+				# give boom 4
+				remove_province_modifier = population_boom_3_modifier
+				add_province_modifier = population_boom_4_modifier
+			}
+			else = {
+				if = {
+					limit = {
+						has_province_modifier = population_boom_4_modifier
+					}
+					# give boom 4 + slum 1 OR upgrade
+					random_list = {
+						1 = {
+							# give boom 4 + slum 1
+							upgrade_slum = yes
+						}
+						1 = {
+							# upgrade
+							remove_province_modifier = population_boom_4_modifier
+							upgrade_great_housing_effect = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+population_expand_effect = {
+	# change
+	# poor housing:         0 -> boom 1 -> boom 2
+	#                         -> boom 2 + slum 1 -> boom 2 + slum 2 -> boom 2 + slum 3
+	#        (self-expansion) -> upgrade
+	#
+	# decent housing:       0 -> boom 1 -> boom 2 -> boom 3
+	#                         -> boom 3 + slum 1 -> boom 3 + slum 2 -> boom 3 + slum 3
+	#        (self-expansion) -> upgrade
+	#
+	# good & great housing: 0 -> boom 1 -> boom 2 -> boom 3 -> boom 4
+	#                         -> boom 4 + slum 1 -> boom 4 + slum 2 -> boom 4 + slum 3
+	#        (self-expansion) -> upgrade
+
+	if = {
+		# has a population shortfall
+		limit = {
+			OR = {
+				has_province_modifier = population_shortfall_1_modifier
+				has_province_modifier = population_shortfall_2_modifier
+				has_province_modifier = population_shortfall_3_modifier
+				has_province_modifier = population_shortfall_4_modifier
+				has_province_modifier = population_shortfall_5_modifier
+			}
+		}
+		# remove one level of shortfall
+		if = {
+			limit = {
+				has_province_modifier = population_shortfall_1_modifier
+			}
+			remove_province_modifier = population_shortfall_1_modifier
+		}
+		else = {
+			if = {
+				limit = {
+					has_province_modifier = population_shortfall_2_modifier
+				}
+				remove_province_modifier = population_shortfall_2_modifier
+				add_province_modifier = population_shortfall_1_modifier
+			}
+			else = {
+				if = {
+					limit = {
+						has_province_modifier = population_shortfall_3_modifier
+					}
+					remove_province_modifier = population_shortfall_3_modifier
+					add_province_modifier = population_shortfall_2_modifier
+				}
+				else = {
+					if = {
+						limit = {
+							has_province_modifier = population_shortfall_4_modifier
+						}
+						remove_province_modifier = population_shortfall_4_modifier
+						add_province_modifier = population_shortfall_3_modifier
+					}
+					else = {
+						if = {
+							limit = {
+								has_province_modifier = population_shortfall_5_modifier
+							}
+							remove_province_modifier = population_shortfall_5_modifier
+							add_province_modifier = population_shortfall_4_modifier
+						}
+					}
+				}
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				has_poor_housing = yes
+			}
+			expand_poor_housing_population_effect = yes
+		}
+		else = {
+			if = {
+				limit = {
+					has_decent_housing = yes
+				}
+				expand_decent_housing_population_effect = yes
+			}
+			else = {
+				if = {
+					limit = {
+						has_good_housing = yes
+					}
+					expand_good_housing_population_effect = yes
+				}
+				else = {
+					if = {
+						limit = {
+							has_great_housing = yes
+						}
+						expand_great_housing_population_effect = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+population_decrease_effect = {
+	# calculate difference between target and present population
+	save_scope_value_as = {
+		name = pop_diff
+		value = {
+			add = scope:pop_target
+			multiply = -1
+			add = population_level_present
+		}
+	}
+	# subtract one level from excess population, if present
+	if = {
+		limit = {
+			OR = {
+				has_province_modifier = population_boom_1_modifier
+				has_province_modifier = population_boom_2_modifier
+				has_province_modifier = population_boom_3_modifier
+				has_province_modifier = population_boom_4_modifier
+			}
+		}
+		custom_label = {
+			text = "boom present, removing one level"
+		}
+		# remove one modifier level
+		if = {
+			limit = {
+				has_province_modifier = population_boom_4_modifier
+			}
+			remove_province_modifier = population_boom_4_modifier
+			add_province_modifier = population_boom_3_modifier
+		}
+		else = {
+			if = {
+				limit = {
+					has_province_modifier = population_boom_3_modifier
+				}
+				remove_province_modifier = population_boom_3_modifier
+				add_province_modifier = population_boom_2_modifier
+			}
+			else = {
+				if = {
+					limit = {
+						has_province_modifier = population_boom_2_modifier
+					}
+					remove_province_modifier = population_boom_2_modifier
+					add_province_modifier = population_boom_1_modifier
+				}
+				else = {
+					if = {
+						limit = {
+							has_province_modifier = population_boom_1_modifier
+						}
+						remove_province_modifier = population_boom_1_modifier
+					}
+				}
+			}
+		}
+	}
+	else = {
+		# otherwise, add one level to population shortfall
+		if = {
+			limit = {
+				AND = {
+					scope:pop_diff = 1
+					NOT = { exists = var:force_depopulation }
+				}
+			}
+			custom_label = {
+				text = "diff = 1"
+			}
+			# add one modifier level, capped at 50% (one level down means 50% of the population is missing)
+			if = {
+				limit = {
+					has_province_modifier = population_shortfall_3_modifier
+				}
+				# nothing happens
+			}
+			else = {
+				if = {
+					limit = {
+						has_province_modifier = population_shortfall_2_modifier
+					}
+					remove_province_modifier = population_shortfall_2_modifier
+					add_province_modifier = population_shortfall_3_modifier
+				}
+				else = {
+					if = {
+						limit = {
+							has_province_modifier = population_shortfall_1_modifier
+						}
+						remove_province_modifier = population_shortfall_1_modifier
+						add_province_modifier = population_shortfall_2_modifier
+					}
+					else = {
+						add_province_modifier = population_shortfall_1_modifier
+					}
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					scope:pop_diff = 2
+					NOT = { exists = var:force_depopulation }
+				}
+				custom_label = {
+					text = "diff = 2"
+				}
+				# add one modifier levels, capped at 75% (two levels down means 75% of the population is missing)
+				if = {
+					limit = {
+						has_province_modifier = population_shortfall_4_modifier
+					}
+					# nothing happens
+				}
+				else = {
+					if = {
+						limit = {
+							has_province_modifier = population_shortfall_3_modifier
+						}
+						remove_province_modifier = population_shortfall_3_modifier
+						add_province_modifier = population_shortfall_4_modifier
+					}
+					else = {
+						if = {
+							limit = {
+								has_province_modifier = population_shortfall_2_modifier
+							}
+							remove_province_modifier = population_shortfall_2_modifier
+							add_province_modifier = population_shortfall_3_modifier
+						}
+						else = {
+							if = {
+								limit = {
+									has_province_modifier = population_shortfall_1_modifier
+								}
+								remove_province_modifier = population_shortfall_1_modifier
+								add_province_modifier = population_shortfall_2_modifier
+							}
+							else = {
+								add_province_modifier = population_shortfall_1_modifier
+							}
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						scope:pop_diff = 3
+						NOT = { exists = var:force_depopulation }
+					}
+					custom_label = {
+						text = "diff = 3"
+					}
+					# add one modifier levels, capped at 90% (three levels down means 90% of the population is missing)
+					if = {
+						limit = {
+							has_province_modifier = population_shortfall_5_modifier
+						}
+						# nothing happens
+					}
+					else = {
+						if = {
+							limit = {
+								has_province_modifier = population_shortfall_4_modifier
+							}
+							remove_province_modifier = population_shortfall_4_modifier
+							add_province_modifier = population_shortfall_5_modifier
+						}
+						else = {
+							if = {
+								limit = {
+									has_province_modifier = population_shortfall_3_modifier
+								}
+								remove_province_modifier = population_shortfall_3_modifier
+								add_province_modifier = population_shortfall_4_modifier
+							}
+							else = {
+								if = {
+									limit = {
+										has_province_modifier = population_shortfall_2_modifier
+									}
+									remove_province_modifier = population_shortfall_2_modifier
+									add_province_modifier = population_shortfall_3_modifier
+								}
+								else = {
+									if = {
+										limit = {
+											has_province_modifier = population_shortfall_1_modifier
+										}
+										remove_province_modifier = population_shortfall_1_modifier
+										add_province_modifier = population_shortfall_2_modifier
+									}
+									else = {
+										add_province_modifier = population_shortfall_1_modifier
+									}
+								}
+							}
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							OR = {
+								scope:pop_diff > 3
+								exists = scope:force_depopulation
+							}
+						}
+						custom_label = {
+							text = "forced or diff > 3"
+						}
+						# add one modifier levels, capped at 90% (three levels down means 90% of the population is missing)
+						if = {
+							limit = {
+								has_province_modifier = population_shortfall_5_modifier
+							}
+							# nothing happens
+						}
+						else = {
+							if = {
+								limit = {
+									has_province_modifier = population_shortfall_4_modifier
+								}
+								remove_province_modifier = population_shortfall_4_modifier
+								add_province_modifier = population_shortfall_5_modifier
+							}
+							else = {
+								if = {
+									limit = {
+										has_province_modifier = population_shortfall_3_modifier
+									}
+									remove_province_modifier = population_shortfall_3_modifier
+									add_province_modifier = population_shortfall_4_modifier
+								}
+								else = {
+									if = {
+										limit = {
+											has_province_modifier = population_shortfall_2_modifier
+										}
+										remove_province_modifier = population_shortfall_2_modifier
+										add_province_modifier = population_shortfall_3_modifier
+									}
+									else = {
+										if = {
+											limit = {
+												has_province_modifier = population_shortfall_1_modifier
+											}
+											remove_province_modifier = population_shortfall_1_modifier
+											add_province_modifier = population_shortfall_2_modifier
+										}
+										else = {
+											add_province_modifier = population_shortfall_1_modifier
+										}
+									}
+								}
+							}
+						}
+					}
+					else = {
+						custom_label = {
+							text = "invalid depopulation call"
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# $PROVINCE$: the province where the population change might be happening
+population_change_check = {
+	# factors leading to population increase:
+	# - high control
+	# all factors affecting initial population generation
+
+	save_scope_value_as = {
+		name = pop_target
+		value = population_level_target
+	}
+
+	if = {
+		limit = {
+			scope:pop_target > population_level_present
+		}
+		random_list = {
+			0 = {
+				# this is the chance of no change
+				modifier = {
+					add = 0 #global_var:population_change_chance_complementary
+				}
+				custom_label = {
+					text = "no change"
+				}
+			}
+			10 = {
+				population_expand_effect = yes
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			scope:pop_target < population_level_present
+		}
+		random_list = {
+			0 = {
+				# this is the chance of no change
+				modifier = {
+					add = 0 #global_var:population_change_chance_complementary
+				}
+				custom_label = {
+					text = "no change"
+				}
+			}
+			10 = {
+				population_decrease_effect = yes
+			}
+		}
+	}
+}
+
+depopulate_after_housing_upgrade = {
+	if = {
+		limit = {
+			has_province_modifier = population_boom_1_modifier
+		}
+		remove_province_modifier = population_boom_1_modifier
+		add_province_modifier = population_shortfall_2_modifier
+	}
+	else = {
+		if = {
+			limit = {
+				has_province_modifier = population_boom_2_modifier
+			}
+			remove_province_modifier = population_boom_2_modifier
+		}
+		else = {
+			if = {
+				limit = {
+					has_province_modifier = population_boom_3_modifier
+				}
+				remove_province_modifier = population_boom_3_modifier
+				add_province_modifier = population_boom_1_modifier
+			}
+			else = {
+				if = {
+					limit = {
+						has_province_modifier = population_boom_4_modifier
+					}
+					remove_province_modifier = population_boom_4_modifier
+					add_province_modifier = population_boom_2_modifier
+				}
+				else = {
+					if = {
+						limit = {
+							has_province_modifier = population_shortfall_1_modifier
+						}
+						remove_province_modifier = population_shortfall_1_modifier
+						add_province_modifier = population_shortfall_3_modifier
+					}
+					else = {
+						if = {
+							limit = {
+								has_province_modifier = population_shortfall_2_modifier
+							}
+							remove_province_modifier = population_shortfall_2_modifier
+							add_province_modifier = population_shortfall_4_modifier
+						}
+						else = {
+							if = {
+								limit = {
+									has_province_modifier = population_shortfall_3_modifier
+								}
+								remove_province_modifier = population_shortfall_3_modifier
+								add_province_modifier = population_shortfall_5_modifier
+							}
+							else = {
+								if = {
+									limit = {
+										has_province_modifier = population_shortfall_4_modifier
+									}
+									remove_province_modifier = population_shortfall_4_modifier
+									add_province_modifier = population_shortfall_5_modifier
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

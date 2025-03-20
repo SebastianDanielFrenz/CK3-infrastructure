@@ -52,3 +52,83 @@ can_construct_road_02 = {
 		}
 	}
 }
+
+# scope: province
+has_poor_housing = {
+	OR = {
+		has_building = infra_housing_poor_s_01
+		has_building = infra_housing_poor_s_02
+		has_building = infra_housing_poor_s_03
+		has_building = infra_housing_poor_s_04
+
+		has_building = infra_housing_poor_m_01
+		has_building = infra_housing_poor_m_02
+		has_building = infra_housing_poor_m_03
+		has_building = infra_housing_poor_m_04
+
+		has_building = infra_housing_poor_l_01
+		has_building = infra_housing_poor_l_02
+		has_building = infra_housing_poor_l_03
+		has_building = infra_housing_poor_l_04
+	}
+}
+
+# scope: province
+has_decent_housing = {
+	OR = {
+		has_building = infra_housing_decent_s_01
+		has_building = infra_housing_decent_s_02
+		has_building = infra_housing_decent_s_03
+		has_building = infra_housing_decent_s_04
+
+		has_building = infra_housing_decent_m_01
+		has_building = infra_housing_decent_m_02
+		has_building = infra_housing_decent_m_03
+		has_building = infra_housing_decent_m_04
+
+		has_building = infra_housing_decent_l_01
+		has_building = infra_housing_decent_l_02
+		has_building = infra_housing_decent_l_03
+		has_building = infra_housing_decent_l_04
+	}
+}
+
+# scope: province
+has_good_housing = {
+	OR = {
+		has_building = infra_housing_good_s_01
+		has_building = infra_housing_good_s_02
+		has_building = infra_housing_good_s_03
+		has_building = infra_housing_good_s_04
+
+		has_building = infra_housing_good_m_01
+		has_building = infra_housing_good_m_02
+		has_building = infra_housing_good_m_03
+		has_building = infra_housing_good_m_04
+
+		has_building = infra_housing_good_l_01
+		has_building = infra_housing_good_l_02
+		has_building = infra_housing_good_l_03
+		has_building = infra_housing_good_l_04
+	}
+}
+
+# scope: province
+has_great_housing = {
+	OR = {
+		has_building = infra_housing_great_s_01
+		has_building = infra_housing_great_s_02
+		has_building = infra_housing_great_s_03
+		has_building = infra_housing_great_s_04
+
+		has_building = infra_housing_great_m_01
+		has_building = infra_housing_great_m_02
+		has_building = infra_housing_great_m_03
+		has_building = infra_housing_great_m_04
+
+		has_building = infra_housing_great_l_01
+		has_building = infra_housing_great_l_02
+		has_building = infra_housing_great_l_03
+		has_building = infra_housing_great_l_04
+	}
+}

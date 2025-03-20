@@ -53,6 +53,10 @@ infra_housing_poor_s_01 = {
 
 	levy = housing_levies_s_01
 
+	can_construct_potential = {
+		show_invisible_base_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_01
 		monthly_income = poor_housing_s_01_income
@@ -69,12 +73,20 @@ infra_housing_poor_s_02 = {
 
 	levy = housing_levies_s_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_02
 		monthly_income = poor_housing_s_02_income
 	}
 	
 	next_building = infra_housing_poor_s_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_poor_s_03 = {
 	construction_time = 180
@@ -85,12 +97,20 @@ infra_housing_poor_s_03 = {
 
 	levy = housing_levies_s_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_03
 		monthly_income = poor_housing_s_03_income
 	}
 	
 	next_building = infra_housing_poor_s_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_poor_s_04 = {
 	construction_time = 180
@@ -101,11 +121,19 @@ infra_housing_poor_s_04 = {
 
 	levy = housing_levies_s_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_04
 		monthly_income = poor_housing_s_04_income
 	}
 	# Upgrade to medium size housing only through events
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_poor_m_01 = {
 	type_icon = "icon_building_infra_housing.dds"
@@ -117,12 +145,26 @@ infra_housing_poor_m_01 = {
 
 	levy = housing_levies_m_01
 
+	can_construct_potential = {
+		has_building = infra_housing_poor_s_04 # must have the previous level
+	}
+	can_construct_showing_failures_only = {
+		can_upgrade_housing = yes
+		# for m and l housing, upgrade from s/m housing is allowed
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_01
 		monthly_income = poor_housing_m_01_income
 	}
 	
 	next_building = infra_housing_poor_m_02
+
+	on_complete = {
+		# Remove the previous level
+		remove_building = infra_housing_poor_s_04
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_poor_m_02 = {
 	construction_time = 180
@@ -133,12 +175,20 @@ infra_housing_poor_m_02 = {
 
 	levy = housing_levies_m_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_02
 		monthly_income = poor_housing_m_02_income
 	}
 	
 	next_building = infra_housing_poor_m_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_poor_m_03 = {
 	construction_time = 180
@@ -149,12 +199,20 @@ infra_housing_poor_m_03 = {
 
 	levy = housing_levies_m_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_03
 		monthly_income = poor_housing_m_03_income
 	}
 	
 	next_building = infra_housing_poor_m_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_poor_m_04 = {
 	construction_time = 180
@@ -165,11 +223,19 @@ infra_housing_poor_m_04 = {
 
 	levy = housing_levies_m_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_04
 		monthly_income = poor_housing_m_04_income
 	}
 	# Upgrade to large size housing only through events
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_poor_l_01 = {
 	type_icon = "icon_building_infra_housing.dds"
@@ -181,12 +247,26 @@ infra_housing_poor_l_01 = {
 
 	levy = housing_levies_l_01
 
+	can_construct_potential = {
+		has_building = infra_housing_poor_m_04 # must have the previous level
+	}
+	can_construct_showing_failures_only = {
+		can_upgrade_housing = yes
+		# for m and l housing, upgrade from s/m housing is allowed
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_01
 		monthly_income = poor_housing_l_01_income
 	}
 	
 	next_building = infra_housing_poor_l_02
+
+	on_complete = {
+		# Remove the previous level
+		remove_building = infra_housing_poor_s_04
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_poor_l_02 = {
 	construction_time = 180
@@ -197,12 +277,20 @@ infra_housing_poor_l_02 = {
 
 	levy = housing_levies_l_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_02
 		monthly_income = poor_housing_l_02_income
 	}
 	
 	next_building = infra_housing_poor_l_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_poor_l_03 = {
 	construction_time = 180
@@ -213,12 +301,20 @@ infra_housing_poor_l_03 = {
 
 	levy = housing_levies_l_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_03
 		monthly_income = poor_housing_l_03_income
 	}
 	
 	next_building = infra_housing_poor_l_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_poor_l_04 = {
 	construction_time = 180
@@ -229,9 +325,17 @@ infra_housing_poor_l_04 = {
 
 	levy = housing_levies_l_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_04
 		monthly_income = poor_housing_l_04_income
+	}
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
 	}
 }
 
@@ -249,6 +353,10 @@ infra_housing_decent_s_01 = {
 
 	levy = housing_levies_s_01
 
+	can_construct_potential = {
+		show_invisible_base_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_01
 		monthly_income = decent_housing_s_01_income
@@ -265,12 +373,20 @@ infra_housing_decent_s_02 = {
 
 	levy = housing_levies_s_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_02
 		monthly_income = decent_housing_s_02_income
 	}
 	
 	next_building = infra_housing_decent_s_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_decent_s_03 = {
 	construction_time = 180
@@ -281,12 +397,20 @@ infra_housing_decent_s_03 = {
 
 	levy = housing_levies_s_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_03
 		monthly_income = decent_housing_s_03_income
 	}
 	
 	next_building = infra_housing_decent_s_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_decent_s_04 = {
 	construction_time = 180
@@ -297,11 +421,19 @@ infra_housing_decent_s_04 = {
 
 	levy = housing_levies_s_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_04
 		monthly_income = decent_housing_s_04_income
 	}
 	# Upgrade to medium size housing only through events
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_decent_m_01 = {
 	type_icon = "icon_building_infra_housing.dds"
@@ -312,6 +444,14 @@ infra_housing_decent_m_01 = {
 	}
 
 	levy = housing_levies_m_01
+	
+	can_construct_potential = {
+		has_building = infra_housing_decent_s_04 # must have the previous level
+	}
+	can_construct_showing_failures_only = {
+		can_upgrade_housing = yes
+		# for m and l housing, upgrade from s/m housing is allowed
+	}
 
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_01
@@ -319,6 +459,12 @@ infra_housing_decent_m_01 = {
 	}
 	
 	next_building = infra_housing_decent_m_02
+
+	on_complete = {
+		# Remove the previous level
+		remove_building = infra_housing_decent_s_04
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_decent_m_02 = {
 	construction_time = 180
@@ -329,12 +475,20 @@ infra_housing_decent_m_02 = {
 
 	levy = housing_levies_m_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_02
 		monthly_income = decent_housing_m_02_income
 	}
 	
 	next_building = infra_housing_decent_m_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_decent_m_03 = {
 	construction_time = 180
@@ -345,12 +499,20 @@ infra_housing_decent_m_03 = {
 
 	levy = housing_levies_m_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_03
 		monthly_income = decent_housing_m_03_income
 	}
 	
 	next_building = infra_housing_decent_m_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_decent_m_04 = {
 	construction_time = 180
@@ -361,11 +523,19 @@ infra_housing_decent_m_04 = {
 
 	levy = housing_levies_m_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_04
 		monthly_income = decent_housing_m_04_income
 	}
 	# Upgrade to large size housing only through events
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_decent_l_01 = {
 	type_icon = "icon_building_infra_housing.dds"
@@ -377,12 +547,26 @@ infra_housing_decent_l_01 = {
 
 	levy = housing_levies_l_01
 
+	can_construct_potential = {
+		has_building = infra_housing_decent_m_04 # must have the previous level
+	}
+	can_construct_showing_failures_only = {
+		can_upgrade_housing = yes
+		# for m and l housing, upgrade from s/m housing is allowed
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_01
 		monthly_income = decent_housing_l_01_income
 	}
 	
 	next_building = infra_housing_decent_l_02
+
+	on_complete = {
+		# Remove the previous level
+		remove_building = infra_housing_decent_s_04
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_decent_l_02 = {
 	construction_time = 180
@@ -393,12 +577,20 @@ infra_housing_decent_l_02 = {
 
 	levy = housing_levies_l_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_02
 		monthly_income = decent_housing_l_02_income
 	}
 	
 	next_building = infra_housing_decent_l_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_decent_l_03 = {
 	construction_time = 180
@@ -409,12 +601,20 @@ infra_housing_decent_l_03 = {
 
 	levy = housing_levies_l_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_03
 		monthly_income = decent_housing_l_03_income
 	}
 	
 	next_building = infra_housing_decent_l_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_decent_l_04 = {
 	construction_time = 180
@@ -425,9 +625,17 @@ infra_housing_decent_l_04 = {
 
 	levy = housing_levies_l_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_04
 		monthly_income = decent_housing_l_04_income
+	}
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
 	}
 }
 
@@ -445,6 +653,10 @@ infra_housing_good_s_01 = {
 
 	levy = housing_levies_s_01
 
+	can_construct_potential = {
+		show_invisible_base_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_01
 		monthly_income = good_housing_s_01_income
@@ -461,12 +673,20 @@ infra_housing_good_s_02 = {
 
 	levy = housing_levies_s_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_02
 		monthly_income = good_housing_s_02_income
 	}
 	
 	next_building = infra_housing_good_s_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_good_s_03 = {
 	construction_time = 180
@@ -477,12 +697,20 @@ infra_housing_good_s_03 = {
 
 	levy = housing_levies_s_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_03
 		monthly_income = good_housing_s_03_income
 	}
 	
 	next_building = infra_housing_good_s_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_good_s_04 = {
 	construction_time = 180
@@ -493,11 +721,19 @@ infra_housing_good_s_04 = {
 
 	levy = housing_levies_s_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_04
 		monthly_income = good_housing_s_04_income
 	}
 	# Upgrade to medium size housing only through events
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_good_m_01 = {
 	type_icon = "icon_building_infra_housing.dds"
@@ -508,6 +744,14 @@ infra_housing_good_m_01 = {
 	}
 
 	levy = housing_levies_m_01
+	
+	can_construct_potential = {
+		has_building = infra_housing_good_s_04 # must have the previous level
+	}
+	can_construct_showing_failures_only = {
+		can_upgrade_housing = yes
+		# for m and l housing, upgrade from s/m housing is allowed
+	}
 
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_01
@@ -515,6 +759,12 @@ infra_housing_good_m_01 = {
 	}
 	
 	next_building = infra_housing_good_m_02
+
+	on_complete = {
+		# Remove the previous level
+		remove_building = infra_housing_good_s_04
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_good_m_02 = {
 	construction_time = 180
@@ -525,12 +775,20 @@ infra_housing_good_m_02 = {
 
 	levy = housing_levies_m_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_02
 		monthly_income = good_housing_m_02_income
 	}
 	
 	next_building = infra_housing_good_m_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_good_m_03 = {
 	construction_time = 180
@@ -541,12 +799,20 @@ infra_housing_good_m_03 = {
 
 	levy = housing_levies_m_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_03
 		monthly_income = good_housing_m_03_income
 	}
 	
 	next_building = infra_housing_good_m_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_good_m_04 = {
 	construction_time = 180
@@ -557,11 +823,19 @@ infra_housing_good_m_04 = {
 
 	levy = housing_levies_m_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_04
 		monthly_income = good_housing_m_04_income
 	}
 	# Upgrade to large size housing only through events
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_good_l_01 = {
 	type_icon = "icon_building_infra_housing.dds"
@@ -572,6 +846,14 @@ infra_housing_good_l_01 = {
 	}
 
 	levy = housing_levies_l_01
+	
+	can_construct_potential = {
+		has_building = infra_housing_good_m_04 # must have the previous level
+	}
+	can_construct_showing_failures_only = {
+		can_upgrade_housing = yes
+		# for m and l housing, upgrade from s/m housing is allowed
+	}
 
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_01
@@ -579,6 +861,12 @@ infra_housing_good_l_01 = {
 	}
 	
 	next_building = infra_housing_good_l_02
+
+	on_complete = {
+		# Remove the previous level
+		remove_building = infra_housing_good_s_04
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_good_l_02 = {
 	construction_time = 180
@@ -589,12 +877,20 @@ infra_housing_good_l_02 = {
 
 	levy = housing_levies_l_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_02
 		monthly_income = good_housing_l_02_income
 	}
 	
 	next_building = infra_housing_good_l_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_good_l_03 = {
 	construction_time = 180
@@ -605,12 +901,20 @@ infra_housing_good_l_03 = {
 
 	levy = housing_levies_l_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_03
 		monthly_income = good_housing_l_03_income
 	}
 	
 	next_building = infra_housing_good_l_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_good_l_04 = {
 	construction_time = 180
@@ -621,9 +925,17 @@ infra_housing_good_l_04 = {
 
 	levy = housing_levies_l_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_04
 		monthly_income = good_housing_l_04_income
+	}
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
 	}
 }
 
@@ -641,6 +953,10 @@ infra_housing_great_s_01 = {
 
 	levy = housing_levies_s_01
 
+	can_construct_potential = {
+		show_invisible_base_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_01
 		monthly_income = great_housing_s_01_income
@@ -657,12 +973,20 @@ infra_housing_great_s_02 = {
 
 	levy = housing_levies_s_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_02
 		monthly_income = great_housing_s_02_income
 	}
 	
 	next_building = infra_housing_great_s_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_great_s_03 = {
 	construction_time = 180
@@ -673,12 +997,19 @@ infra_housing_great_s_03 = {
 
 	levy = housing_levies_s_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_03
 		monthly_income = great_housing_s_03_income
 	}
 	
 	next_building = infra_housing_great_s_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
 }
 infra_housing_great_s_04 = {
 	construction_time = 180
@@ -689,11 +1020,19 @@ infra_housing_great_s_04 = {
 
 	levy = housing_levies_s_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_s_04
 		monthly_income = great_housing_s_04_income
 	}
 	# Upgrade to medium size housing only through events
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_great_m_01 = {
 	type_icon = "icon_building_infra_housing.dds"
@@ -704,6 +1043,14 @@ infra_housing_great_m_01 = {
 	}
 
 	levy = housing_levies_m_01
+	
+	can_construct_potential = {
+		has_building = infra_housing_great_s_04 # must have the previous level
+	}
+	can_construct_showing_failures_only = {
+		can_upgrade_housing = yes
+		# for m and l housing, upgrade from s/m housing is allowed
+	}
 
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_01
@@ -711,6 +1058,12 @@ infra_housing_great_m_01 = {
 	}
 	
 	next_building = infra_housing_great_m_02
+
+	on_complete = {
+		# Remove the previous level
+		remove_building = infra_housing_great_s_04
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_great_m_02 = {
 	construction_time = 180
@@ -721,12 +1074,20 @@ infra_housing_great_m_02 = {
 
 	levy = housing_levies_m_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_02
 		monthly_income = great_housing_m_02_income
 	}
 	
 	next_building = infra_housing_great_m_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_great_m_03 = {
 	construction_time = 180
@@ -737,12 +1098,20 @@ infra_housing_great_m_03 = {
 
 	levy = housing_levies_m_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_03
 		monthly_income = great_housing_m_03_income
 	}
 	
 	next_building = infra_housing_great_m_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_great_m_04 = {
 	construction_time = 180
@@ -753,11 +1122,19 @@ infra_housing_great_m_04 = {
 
 	levy = housing_levies_m_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_m_04
 		monthly_income = great_housing_m_04_income
 	}
 	# Upgrade to large size housing only through events
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_great_l_01 = {
 	type_icon = "icon_building_infra_housing.dds"
@@ -768,6 +1145,14 @@ infra_housing_great_l_01 = {
 	}
 
 	levy = housing_levies_l_01
+	
+	can_construct_potential = {
+		has_building = infra_housing_great_m_04 # must have the previous level
+	}
+	can_construct_showing_failures_only = {
+		can_upgrade_housing = yes
+		# for m and l housing, upgrade from s/m housing is allowed
+	}
 
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_01
@@ -775,6 +1160,12 @@ infra_housing_great_l_01 = {
 	}
 	
 	next_building = infra_housing_great_l_02
+
+	on_complete = {
+		# Remove the previous level
+		remove_building = infra_housing_great_s_04
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_great_l_02 = {
 	construction_time = 180
@@ -785,12 +1176,20 @@ infra_housing_great_l_02 = {
 
 	levy = housing_levies_l_02
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_02
 		monthly_income = great_housing_l_02_income
 	}
 	
 	next_building = infra_housing_great_l_03
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_great_l_03 = {
 	construction_time = 180
@@ -801,12 +1200,20 @@ infra_housing_great_l_03 = {
 
 	levy = housing_levies_l_03
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_03
 		monthly_income = great_housing_l_03_income
 	}
 	
 	next_building = infra_housing_great_l_04
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
+	}
 }
 infra_housing_great_l_04 = {
 	construction_time = 180
@@ -818,8 +1225,16 @@ infra_housing_great_l_04 = {
 
 	levy = housing_levies_l_04
 
+	can_construct_potential = {
+		can_upgrade_housing = yes
+	}
+
 	province_modifier = {
 		supply_limit = housing_supply_limit_l_04
 		monthly_income = great_housing_l_04_income
+	}
+
+	on_complete = {
+		depopulate_after_housing_upgrade = yes
 	}
 }

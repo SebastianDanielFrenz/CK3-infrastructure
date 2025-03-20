@@ -1,0 +1,5 @@
+population_change_result_none = 0
+population_change_result_boom = 1
+population_change_result_decline = 2
+population_change_result_slum = 3
+population_change_result_noslum = 4

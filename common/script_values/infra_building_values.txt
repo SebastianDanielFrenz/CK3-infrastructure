@@ -1,3 +1,247 @@
+# province scope
+population_level_target = {
+	add = 1
+
+	if = {
+		limit = {
+			is_county_capital = yes
+		}
+		add = 1 #2
+	}
+	if = {
+		limit = {
+			is_coastal = yes
+		}
+		add = 1.5
+	}
+	else = {
+		if = {
+			limit = {
+				is_riverside_province = yes
+			}
+			add = 1
+		}
+	}
+	if = {
+		limit = {
+			county = {
+				is_coastal_county = yes
+			}
+		}
+		add = 0.5
+	}
+	# terrain
+	if = {
+		limit = {
+			terrain = farmlands
+		}
+		add = 2
+	}
+	if = {
+		limit = {
+			terrain = floodplains
+		}
+		add = 1.5
+	}
+	if = {
+		limit = {
+			terrain = hills
+		}
+		add = -1.5
+	}
+	if = {
+		limit = {
+			terrain = mountains
+		}
+		add = -1
+	}
+	# holding type
+	if = {
+		limit = {
+			has_building_or_higher = castle_05
+		}
+		add = 2
+	}
+	if = {
+		limit = {
+			scope:province.county.development_level >= 2
+		}
+		add = 0.5
+	}
+	if = {
+		limit = {
+			scope:province.county.development_level >= 5
+		}
+		add = 0.5
+	}
+	if = {
+		limit = {
+			scope:province.county.development_level >= 9
+		}
+		add = 0.5
+	}
+	if = {
+		limit = {
+			scope:province.county.development_level >= 14
+		}
+		add = 0.5
+	}
+	if = {
+		limit = {
+			scope:province.county.development_level >= 20
+		}
+		add = 0.5
+	}
+	if = {
+		limit = {
+			scope:province.county.development_level >= 27
+		}
+		add = 0.5
+	}
+	if = {
+		limit = {
+			scope:province.county.development_level >= 35
+		}
+		add = 0.5
+	}
+}
+
+# province scope
+population_level_present = {
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_s_01
+				has_building = infra_housing_decent_s_01
+				has_building = infra_housing_good_s_01
+				has_building = infra_housing_great_s_01
+			}
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_s_02
+				has_building = infra_housing_decent_s_02
+				has_building = infra_housing_good_s_02
+				has_building = infra_housing_great_s_02
+			}
+		}
+		add = 2
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_s_03
+				has_building = infra_housing_decent_s_03
+				has_building = infra_housing_good_s_03
+				has_building = infra_housing_great_s_03
+			}
+		}
+		add = 3
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_s_04
+				has_building = infra_housing_decent_s_04
+				has_building = infra_housing_good_s_04
+				has_building = infra_housing_great_s_04
+			}
+		}
+		add = 4
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_m_01
+				has_building = infra_housing_decent_m_01
+				has_building = infra_housing_good_m_01
+				has_building = infra_housing_great_m_01
+			}
+		}
+		add = 5
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_m_02
+				has_building = infra_housing_decent_m_02
+				has_building = infra_housing_good_m_02
+				has_building = infra_housing_great_m_02
+			}
+		}
+		add = 6
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_m_03
+				has_building = infra_housing_decent_m_03
+				has_building = infra_housing_good_m_03
+				has_building = infra_housing_great_m_03
+			}
+		}
+		add = 7
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_m_04
+				has_building = infra_housing_decent_m_04
+				has_building = infra_housing_good_m_04
+				has_building = infra_housing_great_m_04
+			}
+		}
+		add = 8
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_l_01
+				has_building = infra_housing_decent_l_01
+				has_building = infra_housing_good_l_01
+				has_building = infra_housing_great_l_01
+			}
+		}
+		add = 9
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_l_02
+				has_building = infra_housing_decent_l_02
+				has_building = infra_housing_good_l_02
+				has_building = infra_housing_great_l_02
+			}
+		}
+		add = 10
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_l_03
+				has_building = infra_housing_decent_l_03
+				has_building = infra_housing_good_l_03
+				has_building = infra_housing_great_l_03
+			}
+		}
+		add = 11
+	}
+	if = {
+		limit = {
+			OR = {
+				has_building = infra_housing_poor_l_04
+				has_building = infra_housing_decent_l_04
+				has_building = infra_housing_good_l_04
+				has_building = infra_housing_great_l_04
+			}
+		}
+		add = 12
+	}
+}
+
 @super_expensive_cost_base = 250
 @super_expensive_cost_scale_addition_per_tier = 200
 @building_cost_scaling_modifier_super_expensive = 0.1
@@ -100,7 +344,7 @@ great_housing_l_03_cost = @[great_housing_cost_base * 512]
 
 
 ########## HOUSING INCOME ##########
-@poor_housing_income_base = 0.05
+@poor_housing_income_base = 0.01 #0.05
 @decent_housing_income_base = @[poor_housing_income_base * 1.3]
 @good_housing_income_base = @[decent_housing_income_base * 1.3]
 @great_housing_income_base = @[good_housing_income_base * 1.3]

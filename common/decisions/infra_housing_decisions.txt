@@ -1,0 +1,39 @@
+infra_remove_slum_decision = {
+	cost = {
+		prestige = 75
+	}
+
+	ai_goal = yes
+	ai_check_frequency = 50
+
+	sort_order = 100
+
+	is_shown = {
+		any_directly_owned_province = {
+			OR = {
+				has_province_modifier = slum_1_modifier
+				has_province_modifier = slum_2_modifier
+				has_province_modifier = slum_3_modifier
+			}
+			NOT = {
+				has_province_modifier = slum_removal_works_modifier
+			}
+		}
+	}
+	is_valid_showing_failures_only = {
+	}
+
+	should_create_alert = {
+		any_directly_owned_province = {
+			has_province_modifier = slum_3_modifier
+		}
+		OR = {
+			has_trait = ambitious
+			has_trait = compassionate
+		}
+	}
+
+	effect = {
+		
+	}
+}

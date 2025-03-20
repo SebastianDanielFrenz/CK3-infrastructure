@@ -13,3 +13,35 @@ dev.0001 = {
         name = dev.0001.a
     }
 }
+
+dev.0002 = {
+    left_portrait = root
+
+    option = {
+        name = "remove housing"
+        every_directly_owned_province = {
+            remove_building = infra_housing_poor_s_01
+            remove_building = infra_housing_poor_s_02
+            remove_building = infra_housing_poor_s_03
+            remove_building = infra_housing_poor_s_04
+
+            remove_building = infra_housing_poor_m_01
+            remove_building = infra_housing_poor_m_02
+            remove_building = infra_housing_poor_m_03
+            remove_building = infra_housing_poor_m_04
+
+            remove_building = infra_housing_poor_l_01
+            remove_building = infra_housing_poor_l_02
+            remove_building = infra_housing_poor_l_03
+            remove_building = infra_housing_poor_l_04
+        }
+    }
+
+    option = {
+        name = "add building s 01"
+
+        every_directly_owned_province = {
+            add_building = infra_housing_poor_s_01
+        }
+    }
+}

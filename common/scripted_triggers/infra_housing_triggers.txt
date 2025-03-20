@@ -1,0 +1,46 @@
+# root: province
+# scope:holder: character
+can_upgrade_housing = {
+	OR = {
+		AND = {
+			scope:holder = {
+				OR = {
+					has_trait = ambitious
+					has_trait = architect
+				}
+			}
+			root = {
+				has_province_modifier = population_boom_1_modifier
+			}
+		}
+		AND = {
+			root = {
+				has_province_modifier = population_boom_2_modifier
+			}
+		}
+		AND = {
+			OR = {
+				root = {
+					has_province_modifier = population_boom_1_modifier
+					has_province_modifier = population_boom_2_modifier
+					has_province_modifier = population_boom_3_modifier
+					has_province_modifier = population_boom_4_modifier
+				}
+			}
+			scope:holder = {
+				has_trait = compassionate
+			}
+		}
+	}
+	
+	#custom_tooltip = {
+	#	text = "can_upgrade_housing_tooltip"
+	#
+	#	
+	#}
+}
+
+show_invisible_base_housing = {
+	always = no   # normal behavior
+	#always = yes  # debug behavior to inspect language keys
+}
