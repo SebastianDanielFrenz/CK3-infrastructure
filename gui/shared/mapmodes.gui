@@ -343,7 +343,7 @@ types MapModes
 
 			}
 
-			## Middle Row
+			## Middle Row (upper)
 			flowcontainer = {
 				parentanchor = hcenter
 				direction = horizontal
@@ -353,26 +353,26 @@ types MapModes
 				visible = "[CanChangeMapMode]"
 
 				icon_button_mapmode = {
-					name = "map_mode_infra_button"
+					name = "map_mode_warring_button"
 					size = { 36 36 }
 
 					blockoverride "mm_button"
 					{
-						onclick = "[SetMapMode('infra')]"
-						onclick = "[GetScriptedGui('line_infra_map').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-						down = "[And( GetScriptedGui('line_infra_map').IsShown(GuiScope.End), IsMapMode('infra') )]"
-						enabled = "[And(Not(IsObserver), GetScriptedGui('line_infra_map').IsValid(GuiScope.End))]"
-						tooltip = "MAPMODE_INFRA_TOOLTIP"
+						onclick = "[SetMapMode('warring')]"
+						onclick = "[GetScriptedGui('line_warring_map').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						down = "[And( GetScriptedGui('line_warring_map').IsShown(GuiScope.End), IsMapMode('warring') )]"
+						enabled = "[And(Not(IsObserver), GetScriptedGui('line_warring_map').IsValid(GuiScope.End))]"
+						tooltip = "MAPMODE_WARRING_TOOLTIP"
 					}
 					blockoverride "mm_icon"
 					{
-						down = "[IsMapMode('infra')]"
+						down = "[IsMapMode('warring')]"
 						texture = "gfx/interface/icons/flat_icons/mapmode_warring.dds"
 					}
 
 					blockoverride "mm_glow"
 					{
-						visible = "[IsMapMode('infra')]"
+						visible = "[IsMapMode('warring')]"
 					}
 				}
 				
@@ -497,6 +497,160 @@ types MapModes
 				}
 			}
 
+			## Middle Row (lower)
+			flowcontainer = {
+				parentanchor = hcenter
+				direction = horizontal
+				ignoreinvisible = no
+				spacing = -2
+
+				visible = "[CanChangeMapMode]"
+
+				icon_button_mapmode = {
+					name = "map_mode_infra_button"
+					size = { 36 36 }
+
+					blockoverride "mm_button"
+					{
+						onclick = "[SetMapMode('infra')]"
+						onclick = "[GetScriptedGui('line_infra_map').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						down = "[And( GetScriptedGui('line_infra_map').IsShown(GuiScope.End), IsMapMode('infra') )]"
+						enabled = "[And(Not(IsObserver), GetScriptedGui('line_infra_map').IsValid(GuiScope.End))]"
+						tooltip = "MAPMODE_INFRA_TOOLTIP"
+					}
+					blockoverride "mm_icon"
+					{
+						down = "[IsMapMode('infra')]"
+						texture = "gfx/interface/icons/flat_icons/mapmode_road_network.dds"
+					}
+
+					blockoverride "mm_glow"
+					{
+						visible = "[IsMapMode('infra')]"
+					}
+				}
+				
+				icon_button_mapmode = {
+					name = "map_mode_population_target_button"
+					size = { 36 36 }
+
+					blockoverride "mm_button"
+					{
+						onclick = "[SetMapMode('population_target')]"
+						onclick = "[GetScriptedGui('line_population_target_map').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						down = "[And( GetScriptedGui('line_population_target_map').IsShown(GuiScope.End), IsMapMode('population_target') )]"
+						enabled = "[And(Not(IsObserver), GetScriptedGui('line_population_target_map').IsValid(GuiScope.End))]"
+						tooltip = "MAPMODE_POPULATION_TARGET_TOOLTIP"
+					}
+					blockoverride "mm_icon"
+					{
+						down = "[IsMapMode('population_target')]"
+						texture = "gfx/interface/icons/flat_icons/mapmode_population.dds"
+					}
+
+					blockoverride "mm_glow"
+					{
+						visible = "[IsMapMode('population_target')]"
+					}
+				}
+
+				icon_button_mapmode = {
+					name = "map_mode_harvest_button"
+					size = { 36 36 }
+
+					blockoverride "mm_button"
+					{
+						onclick = "[SetMapMode('harvest')]"
+						onclick = "[GetScriptedGui('line_harvest_map').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						down = "[And( GetScriptedGui('line_harvest_map').IsShown(GuiScope.End), IsMapMode('harvest') )]"
+						enabled = "[And(Not(IsObserver), GetScriptedGui('line_harvest_map').IsValid(GuiScope.End))]"
+						tooltip = "MAPMODE_HARVEST_TOOLTIP"
+					}
+					blockoverride "mm_icon"
+					{
+						down = "[IsMapMode('harvest')]"
+						texture = "gfx/interface/icons/flat_icons/mapmode_harvest.dds"
+					}
+
+					blockoverride "mm_glow"
+					{
+						visible = "[IsMapMode('harvest')]"
+					}
+				}
+				
+				icon_button_mapmode = {
+					name = "map_mode_artifact_map_button"
+					size = { 36 36 }
+
+					blockoverride "mm_button"
+					{
+						onclick = "[SetMapMode('artifact')]"
+						onclick = "[GetScriptedGui('line_artifact_map').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						down = "[And( GetScriptedGui('line_artifact_map').IsShown(GuiScope.End), IsMapMode('artifact') )]"
+						enabled = "[And(Not(IsObserver), GetScriptedGui('line_artifact_map').IsValid(GuiScope.End))]"
+						tooltip = "MAPMODE_ARTIFACT_TOOLTIP"
+					}
+					blockoverride "mm_icon"
+					{
+						down = "[IsMapMode('artifact')]"
+						texture = "gfx/interface/icons/flat_icons/mapmode_artifact.dds"
+					}
+
+					blockoverride "mm_glow"
+					{
+						visible = "[IsMapMode('artifact')]"
+					}
+				}
+
+				icon_button_mapmode = {
+					name = "map_mode_county_control_button"
+					size = { 36 36 }
+
+					blockoverride "mm_button"
+					{
+						onclick = "[SetMapMode('county_control')]"
+						down = "[IsMapMode('county_control')]"
+						shortcut = "map_mode_7"
+						tooltip = "MAPMODE_COUNTY_CONTROL"
+					}
+					blockoverride "mm_icon"
+					{
+						down = "[IsMapMode('county_control')]"
+						texture = "gfx/interface/icons/flat_icons/mapmode_county_control.dds"
+					}
+
+					blockoverride "mm_glow"
+					{
+						visible = "[IsMapMode('county_control')]"
+					}
+				}
+				
+				icon_button_mapmode = {
+					name = "map_mode_weather_button"
+					size = { 36 36 }
+					#visible = "[GetGlobalVariable('custom_map_mode').IsSet]" ## To-Do:: Use Silk Road's weather map's updates
+
+					blockoverride "mm_button"
+					{
+						onclick = "[SetMapMode('weather')]"
+						onclick = "[GetScriptedGui('line_weather_map').Execute(GuiScope.End)]"
+						down = "[And( GetScriptedGui('line_weather_map').IsShown(GuiScope.End), IsMapMode('weather') )]"
+						enabled = "[And(Not(IsObserver), GetScriptedGui('line_weather_map').IsValid(GuiScope.End))]"
+						tooltip = "MAPMODE_WEATHER_TOOLTIP"
+					}
+					blockoverride "mm_icon"
+					{
+						down = "[IsMapMode('weather')]"
+						texture = "gfx/interface/icons/flat_icons/mapmode_weather.dds"
+					}
+
+					blockoverride "mm_glow"
+					{
+						visible = "[IsMapMode('weather')]"
+					}
+				}
+			}
+
 			## Lower Row
 			flowcontainer = {
 				parentanchor = hcenter
@@ -520,7 +674,7 @@ types MapModes
 					blockoverride "mm_icon"
 					{
 						down = "[IsMapMode('county_development')]"
-						texture = "gfx/interface/icons/flat_icons/mapmode_population.dds"
+						texture = "gfx/interface/icons/flat_icons/mapmode_economy.dds"
 					}
 
 					blockoverride "mm_glow"

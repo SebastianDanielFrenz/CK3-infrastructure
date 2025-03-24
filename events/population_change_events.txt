@@ -1,0 +1,148 @@
+namespace = population_change
+
+population_change.0000 = {
+	immediate = {
+		every_directly_owned_province = {
+			remove_province_modifier = population_boom_1_modifier
+			remove_province_modifier = population_boom_2_modifier
+			remove_province_modifier = population_boom_3_modifier
+			remove_province_modifier = population_boom_4_modifier
+
+			remove_province_modifier = slum_1_modifier
+			remove_province_modifier = slum_2_modifier
+			remove_province_modifier = slum_3_modifier
+
+			remove_building = infra_housing_poor_s_01
+			remove_building = infra_housing_poor_s_02
+			remove_building = infra_housing_poor_s_03
+			remove_building = infra_housing_poor_s_04
+
+			remove_building = infra_housing_poor_m_01
+			remove_building = infra_housing_poor_m_02
+			remove_building = infra_housing_poor_m_03
+			remove_building = infra_housing_poor_m_04
+
+			remove_building = infra_housing_poor_l_01
+			remove_building = infra_housing_poor_l_02
+			remove_building = infra_housing_poor_l_03
+			remove_building = infra_housing_poor_l_04
+
+			remove_province_modifier = population_shortfall_1_modifier
+			remove_province_modifier = population_shortfall_2_modifier
+			remove_province_modifier = population_shortfall_3_modifier
+			remove_province_modifier = population_shortfall_4_modifier
+			remove_province_modifier = population_shortfall_5_modifier
+
+			add_building = infra_housing_poor_s_01
+		}
+	}
+}
+
+population_change.0001 = {
+	hidden = yes
+
+	immediate = {
+		root = {
+			save_scope_as = character_scope
+		}
+		every_directly_owned_province = {
+			save_scope_as = selected_province
+			scope:character_scope = {
+				#add_gold = 1
+				trigger_event = {
+					id = population_change.0002
+					days = { 0 0 }   # { 0 1825 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "nothing"
+	}
+}
+
+population_change.0002 = {
+	hidden = yes
+
+	immediate = {
+		scope:selected_province = {
+			population_change_check = yes
+		}
+	}
+
+	#option = {
+	#	name = "nothing"
+#
+	#	scope:selected_province = {
+	#		population_change_check = yes
+	#	}
+	#}
+}
+
+population_change.9999 = {
+	immediate = {
+		random_directly_owned_province = {
+			save_scope_as = selected_province
+
+			save_scope_value_as = {
+				name = pop_target
+				value = population_level_target
+			}
+			save_scope_value_as = {
+				name = pop_current
+				value = population_level_present
+			}
+
+			
+			save_scope_value_as = {
+				name = pop_diff
+				value = {
+					add = scope:pop_target
+					multiply = -1
+					add = population_level_present
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "increase"
+		every_directly_owned_province = {
+			population_expand_effect = yes
+		}
+	}
+	option = {
+		name = "natural decrease"
+		every_directly_owned_province = {
+			population_decrease_effect = yes
+		}
+	}
+	option = {
+		name = "forced decrease"
+		every_directly_owned_province = {
+			#set_variable = {
+			#	name = force_depopulation
+			#	value = 1
+			#}
+			save_temporary_scope_value_as = {
+				name = force_depopulation
+				value = 1
+			}
+			population_decrease_effect = yes
+			#remove_variable = force_depopulation
+		}
+	}
+
+	option = {
+		name = "natural pulse action"
+
+		every_directly_owned_province = {
+			population_change_check = yes
+		}
+	}
+
+	option = {
+		name = "nothing"
+	}
+}

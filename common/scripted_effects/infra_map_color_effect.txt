@@ -218,3 +218,188 @@ line_mapping_infra_map = {
 
 	}
 }
+
+# root scope: barony
+set_color_for_barony__population_target = {
+	save_scope_as = current_barony
+			
+	title_province = {
+		save_scope_as = province
+	
+		save_scope_value_as = {
+			name = pop_target_score
+			value = population_level_target
+		}
+	}
+	if = {
+		limit = {
+			scope:pop_target_score < 1
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_0
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 1
+			scope:pop_target_score < 2
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_10
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 2
+			scope:pop_target_score < 3
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_20
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 3
+			scope:pop_target_score < 4
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_30
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 4
+			scope:pop_target_score < 5
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_40
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 5
+			scope:pop_target_score < 6
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_50
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 6
+			scope:pop_target_score < 7
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_60
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 7
+			scope:pop_target_score < 8
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_70
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 8
+			scope:pop_target_score < 9
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_80
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 9
+			scope:pop_target_score < 10
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_90
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 10
+			scope:pop_target_score < 11
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_100
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 11
+			scope:pop_target_score < 12
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_110
+	}
+	if = {
+		limit = {
+			scope:pop_target_score >= 12
+			scope:pop_target_score < 13
+		}
+		set_color_from_title = title:d_line_map_infra_score_to_120
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				exists = scope:pop_target_score
+			}
+		}
+		set_color_from_title = title:d_line_map_special_building
+	}
+	if = {
+		limit = {
+			scope:pop_target_score = -1
+		}
+		set_color_from_title = title:d_line_map_holy_order
+	}
+
+	#set_color_from_title = title:d_line_map_special_building
+}
+
+line_mapping_population_target_map = {
+	#every_barony = {
+	#	set_color_from_title = title:d_line_map_special_building
+	#}
+	every_barony = {
+		set_color_for_barony__population_target = yes
+	}
+}
+
+line_mapping_harvest_map = {
+	every_barony = {
+		save_scope_as = current_barony
+
+		title_province = {
+			save_scope_as = province
+		}
+
+		#set_color_from_title = title:d_line_map_holy_order
+
+		if = {
+			limit = {
+				scope:province = { has_province_modifier = harvest_good_1_modifier }
+			}
+			set_color_from_title = title:d_line_map_harvest_good_1
+		}
+		else = {
+			if = {
+				limit = {
+					scope:province = { has_province_modifier = harvest_good_2_modifier }
+				}
+				set_color_from_title = title:d_line_map_harvest_good_2
+			}
+			else = {
+				if = {
+					limit = {
+						scope:province = { has_province_modifier = harvest_bad_1_modifier }
+					}
+					set_color_from_title = title:d_line_map_harvest_bad_1
+				}
+				else = {
+					if = {
+						limit = {
+							scope:province = { has_province_modifier = harvest_bad_2_modifier }
+						}
+						set_color_from_title = title:d_line_map_harvest_bad_2
+					}
+					else = {
+						if = {
+							limit = {
+								scope:province = { has_province_modifier = harvest_bad_3_modifier }
+							}
+							set_color_from_title = title:d_line_map_harvest_bad_3
+						}
+						else = {
+							# neutral color
+							set_color_from_title = title:d_line_map_harvest_normal
+						}
+					}
+				}
+			}
+		}
+	}
+}

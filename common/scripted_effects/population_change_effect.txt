@@ -707,7 +707,8 @@ population_decrease_effect = {
 		if = {
 			limit = {
 				AND = {
-					scope:pop_diff = 1
+					scope:pop_diff >= 1
+					scope:pop_diff < 2
 					NOT = { exists = var:force_depopulation }
 				}
 			}
@@ -746,7 +747,8 @@ population_decrease_effect = {
 		else = {
 			if = {
 				limit = {
-					scope:pop_diff = 2
+					scope:pop_diff >= 2
+					scope:pop_diff < 3
 					NOT = { exists = var:force_depopulation }
 				}
 				custom_label = {
@@ -793,7 +795,7 @@ population_decrease_effect = {
 			else = {
 				if = {
 					limit = {
-						scope:pop_diff = 3
+						scope:pop_diff >= 3
 						NOT = { exists = var:force_depopulation }
 					}
 					custom_label = {
@@ -925,10 +927,25 @@ population_change_check = {
 		name = pop_target
 		value = population_level_target
 	}
+	save_scope_value_as = {
+		name = pop_current
+		value = population_level_present
+	}
+	
+	save_scope_value_as = {
+		name = pop_diff
+		value = {
+			add = scope:pop_target
+			multiply = -1
+			add = population_level_present
+		}
+		# +1 means 1 over target
+		# -1 means 1 under target
+	}
 
 	if = {
 		limit = {
-			scope:pop_target > population_level_present
+			scope:pop_diff <= -1
 		}
 		random_list = {
 			0 = {
@@ -948,7 +965,7 @@ population_change_check = {
 
 	if = {
 		limit = {
-			scope:pop_target < population_level_present
+			scope:pop_doff >= 1
 		}
 		random_list = {
 			0 = {

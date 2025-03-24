@@ -58,3 +58,254 @@ five_year_playable_pulse = {
 		infra_population_pulse
 	}
 }
+
+# harvest pulse
+
+yearly_infra_harvest_pulse = {
+	effect = {
+		# clear earlier harvest modifiers
+		every_province = {
+			if = {
+				limit = { has_province_modifier = harvest_good_1_modifier }
+				remove_province_modifier = harvest_good_1_modifier
+			}
+			if = {
+				limit = { has_province_modifier = harvest_good_2_modifier }
+				remove_province_modifier = harvest_good_2_modifier
+			}
+			if = {
+				limit = { has_province_modifier = harvest_bad_1_modifier }
+				remove_province_modifier = harvest_bad_1_modifier
+			}
+			if = {
+				limit = { has_province_modifier = harvest_bad_2_modifier }
+				remove_province_modifier = harvest_bad_2_modifier
+			}
+		}
+		# randomly choose provinces to have a special harvest
+		while = {
+			count = {
+				if = { limit = { has_game_rule = infra_harvest_rule_10 } add = 10 }
+				else = { if = { limit = { has_game_rule = infra_harvest_rule_20 } add = 20 }
+					else = { if = { limit = { has_game_rule = infra_harvest_rule_40 } add = 40 }
+						else = { if = { limit = { has_game_rule = infra_harvest_rule_80 } add = 80 }
+							else = { if = { limit = { has_game_rule = infra_harvest_rule_320 } add = 320 }
+							}
+						}
+					}
+				}
+			}
+
+			random_list = {
+				10 = {
+					save_scope_value_as = {
+						name = harvest_type
+						value = 2
+					}
+				}
+				20 = {
+					save_scope_value_as = {
+						name = harvest_type
+						value = 1
+					}
+				}
+				20 = {
+					save_scope_value_as = {
+						name = harvest_type
+						value = -1
+					}
+				}
+				10 = {
+					save_scope_value_as = {
+						name = harvest_type
+						value = -2
+					}
+				}
+				2 = {
+					trigger = {
+						has_game_rule = infra_harvest_apocalyptic_rule_rare
+					}
+					save_scope_value_as = {
+						name = harvest_type
+						value = -3
+					}
+				}
+				4 = {
+					trigger = {
+						has_game_rule = infra_harvest_apocalyptic_rule_common
+					}
+					save_scope_value_as = {
+						name = harvest_type
+						value = -3
+					}
+				}
+			}
+			
+			random_province = {
+				save_scope_as = speical_harvest_province
+
+				barony = {
+					county = {
+						every_neighboring_county = {
+							every_neighboring_county = {
+								every_county_province = {
+									if = {
+										limit = {
+											scope:harvest_type = 1
+											NOR = {
+												has_province_modifier = harvest_good_1_modifier
+												has_province_modifier = harvest_good_2_modifier
+
+												has_province_modifier = harvest_bad_1_modifier
+												has_province_modifier = harvest_bad_2_modifier
+												has_province_modifier = harvest_bad_3_modifier
+											}
+										}
+										add_province_modifier = harvest_good_1_modifier
+										holder = {
+											trigger_event = harvest_event.0001
+										}
+									}
+									else = {
+										if = {
+											limit = {
+												scope:harvest_type = 2
+												NOR = {
+													has_province_modifier = harvest_good_1_modifier
+													has_province_modifier = harvest_good_2_modifier
+
+													has_province_modifier = harvest_bad_1_modifier
+													has_province_modifier = harvest_bad_2_modifier
+													has_province_modifier = harvest_bad_3_modifier
+												}
+											}
+											add_province_modifier = harvest_good_2_modifier
+											holder = {
+												trigger_event = harvest_event.0002
+											}
+										}
+										else = {
+											if = {
+												limit = {
+													scope:harvest_type = -1
+													NOR = {
+														has_province_modifier = harvest_good_1_modifier
+														has_province_modifier = harvest_good_2_modifier
+	
+														has_province_modifier = harvest_bad_1_modifier
+														has_province_modifier = harvest_bad_2_modifier
+														has_province_modifier = harvest_bad_3_modifier
+													}
+												}
+												add_province_modifier = harvest_bad_1_modifier
+												holder = {
+													trigger_event = harvest_event.0003
+												}
+											}
+											else = {
+												if = {
+													limit = {
+														scope:harvest_type = -2
+														NOR = {
+															has_province_modifier = harvest_good_1_modifier
+															has_province_modifier = harvest_good_2_modifier
+		
+															has_province_modifier = harvest_bad_1_modifier
+															has_province_modifier = harvest_bad_2_modifier
+															has_province_modifier = harvest_bad_3_modifier
+														}
+													}
+													add_province_modifier = harvest_bad_2_modifier
+													holder = {
+														trigger_event = harvest_event.0004
+													}
+												}
+												else = {
+													if = {
+														limit = {
+															scope:harvest_type = -3
+															NOR = {
+																has_province_modifier = harvest_good_1_modifier
+																has_province_modifier = harvest_good_2_modifier
+			
+																has_province_modifier = harvest_bad_1_modifier
+																has_province_modifier = harvest_bad_2_modifier
+																has_province_modifier = harvest_bad_3_modifier
+															}
+														}
+														add_province_modifier = harvest_bad_3_modifier
+														holder = {
+															trigger_event = harvest_event.0005
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				#every_province = {
+				#	limit = {
+				#		squared_distance = {
+				#			target = speical_harvest_province
+				#			value < 200
+				#		}
+				#	}
+				#	save_scope_as = checking_province
+				#	barony = {
+				#		holder = {
+				#			trigger_event = harvest_event.0001
+				#		}
+				#	}
+				#	# add the harvest modifier
+				#	if = {
+				#		limit = {
+				#			scope:harvest_type = 1
+				#		}
+				#		add_province_modifier = harvest_good_1_modifier
+				#	}
+				#	else = {
+				#		if = {
+				#			limit = {
+				#				scope:harvest_type = 2
+				#			}
+				#			add_province_modifier = harvest_good_2_modifier
+				#		}
+				#		else = {
+				#			if = {
+				#				limit = {
+				#					scope:harvest_type = -1
+				#				}
+				#				add_province_modifier = harvest_bad_1_modifier
+				#			}
+				#			else = {
+				#				if = {
+				#					limit = {
+				#						scope:harvest_type = -2
+				#					}
+				#					add_province_modifier = harvest_bad_2_modifier
+				#				}
+				#			}
+				#		}
+				#	}
+				#}
+			}
+		}
+	}
+}
+
+yearly_infra_pulse = {
+	on_actions = {
+		yearly_infra_harvest_pulse
+	}
+}
+
+yearly_global_pulse = {
+	on_actions = {
+		yearly_infra_pulse
+	}
+}

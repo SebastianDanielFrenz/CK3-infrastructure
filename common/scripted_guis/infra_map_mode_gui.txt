@@ -3,3 +3,15 @@ line_infra_map = {
 		line_mapping_infra_map = yes
 	}
 }
+
+line_population_target_map = {
+	effect = {
+		line_mapping_population_target_map = yes
+	}
+}
+
+line_harvest_map = {
+	effect = {
+		line_mapping_harvest_map = yes
+	}
+}

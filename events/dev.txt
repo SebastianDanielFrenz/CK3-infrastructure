@@ -45,3 +45,11 @@ dev.0002 = {
         }
     }
 }
+
+dev.9999 = {
+    left_portrait = root
+
+    option = {
+        name = "exit"
+    }
+}

@@ -137,3 +137,41 @@ slum_removal_works_modifier = {
 	development_growth_factor = 0.2
 	tax_mult = -0.25
 }
+
+# harvest modifiers
+
+harvest_good_1_modifier = {
+	icon = spoon_positive
+	development_growth_factor = 0.1
+	tax_mult = 0.1
+}
+
+harvest_good_2_modifier = {
+	icon = spoon_positive
+	development_growth_factor = 0.2
+	tax_mult = 0.2
+}
+
+harvest_bad_1_modifier = {
+	icon = spoon_negative
+	development_growth_factor = -0.1
+	tax_mult = -0.1
+}
+
+harvest_bad_2_modifier = {
+	icon = spoon_negative
+	development_growth_factor = -0.2
+	tax_mult = -0.2
+}
+
+harvest_bad_3_modifier = {
+	icon = spoon_negative
+	development_growth_factor = -1
+	tax_mult = -0.9
+}
+
+harvest_famine_modifier = {
+	icon = spoon_negative
+	development_growth_factor = -0.5
+	tax_mult = -0.5
+}

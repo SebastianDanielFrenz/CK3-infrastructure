@@ -20,8 +20,8 @@ infra_remove_slum_decision = {
 			}
 		}
 	}
-	is_valid_showing_failures_only = {
-	}
+	#is_valid_showing_failures_only = {
+	#}
 
 	should_create_alert = {
 		any_directly_owned_province = {

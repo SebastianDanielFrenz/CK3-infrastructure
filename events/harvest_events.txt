@@ -1,0 +1,33 @@
+namespace = harvest_event
+
+harvest_event.0001 = {
+	left_portrait = root
+
+	option = {
+		name = "nothing"
+	}
+}
+
+harvest_event.0002 = {
+	left_portrait = root
+	
+	option = {
+		name = "nothing"
+	}
+}
+
+harvest_event.0003 = {
+	left_portrait = root
+	
+	option = {
+		name = "nothing"
+	}
+}
+
+harvest_event.0004 = {
+	left_portrait = root
+	
+	option = {
+		name = "nothing"
+	}
+}

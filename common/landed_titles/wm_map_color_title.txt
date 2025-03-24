@@ -8,13 +8,13 @@ d_line_map_base = {
 ###### GENERAL ######
 
 d_line_map_holy_order = {
-	color = { 255 255 255 }
+	color = { 249 249 249 }
 	capital = c_roma
 	can_create = { always = no }
 }
 
 d_line_map_special_building = {
-	color = { 0 0 0 }
+	color = { 6 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -22,24 +22,24 @@ d_line_map_special_building = {
 ###### DYNASTY LINEAGE ######
 # Lighter color
 d_line_map_dynasty_realm_01 = {
-	color = { 255 194 15 }
+	color = { 249 194 15 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_dynasty_realm_02 = {
-	color = { 255 180 45 }
+	color = { 249 180 45 }
 	capital = c_roma
 	can_create = { always = no }
 }
 
 # Intermediate color
 d_line_map_dynasty_01 = {
-	color = { 173 51 0 }
+	color = { 173 51 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_dynasty_02 = {
-	color = { 190 90 0 }
+	color = { 190 90 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -51,7 +51,7 @@ d_line_map_dynasty_independent_01 = {
 	can_create = { always = no }
 }
 d_line_map_dynasty_independent_02 = {
-	color = { 105 45 0 }
+	color = { 105 45 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -70,12 +70,12 @@ d_line_map_dynasty_special_02 = {
 
 # Other
 d_line_map_dynasty_barony_01 = {
-	color = { 255 0 0 }
+	color = { 249 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_dynasty_barony_02 = {
-	color = { 255 51 51 }
+	color = { 249 51 51 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -133,12 +133,12 @@ d_line_map_dynasty_special_04 = {
 
 # Other
 d_line_map_dynasty_barony_03 = {
-	color = { 0 0 102 }
+	color = { 6 6 102 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_dynasty_barony_04 = {
-	color = { 0 0 51 }
+	color = { 6 6 51 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -183,7 +183,7 @@ d_line_map_dynasty_independent_06 = {
 
 # Darkest color
 d_line_map_dynasty_special_05 = {
-	color = { 102 0 51 }
+	color = { 102 6 51 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -195,12 +195,12 @@ d_line_map_dynasty_special_06 = {
 
 # Other
 d_line_map_dynasty_barony_05 = {
-	color = { 255 0 0 }
+	color = { 249 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_dynasty_barony_06 = {
-	color = { 255 51 51 }
+	color = { 249 51 51 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -221,7 +221,7 @@ d_line_map_dynasty_realm_08 = {
 
 # Intermediate color
 d_line_map_dynasty_07 = {
-	color = { 0 180 80 }
+	color = { 6 180 80 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -233,19 +233,19 @@ d_line_map_dynasty_08 = {
 
 # Darker color
 d_line_map_dynasty_independent_07 = {
-	color = { 0 128 0 }
+	color = { 6 128 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_dynasty_independent_08 = {
-	color = { 0 163 37 }
+	color = { 6 163 37 }
 	capital = c_roma
 	can_create = { always = no }
 }
 
 # Darkest
 d_line_map_dynasty_special_07 = {
-	color = { 0 51 0 }
+	color = { 6 51 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -258,12 +258,12 @@ d_line_map_dynasty_special_08 = {
 
 # Other
 d_line_map_dynasty_barony_07 = {
-	color = { 255 0 0 }
+	color = { 249 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_dynasty_barony_08 = {
-	color = { 255 51 51 }
+	color = { 249 51 51 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -274,17 +274,17 @@ d_line_map_dynasty_barony_08 = {
 ###### WEATHER MAP ######
 
 d_line_map_weather_winter_mild = {
-	color = { 128 255 255 }
+	color = { 128 249 249 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_weather_winter_normal = {
-	color = { 40 180 255 }
+	color = { 40 180 249 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_weather_winter_harsh = {
-	color = { 40 40 255 }
+	color = { 40 40 249 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -336,63 +336,98 @@ d_line_map_infra_score_to_80 = {
 	can_create = { always = no }
 }
 d_line_map_infra_score_to_90 = {
-	color = { 255 0 0 }
+	color = { 249 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_infra_score_to_100 = {
-	color = { 255 30 0 }
+	color = { 249 30 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_infra_score_to_110 = {
-	color = { 255 60 0 }
+	color = { 249 60 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_infra_score_to_120 = {
-	color = { 255 90 0 }
+	color = { 249 90 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_infra_score_to_130 = {
-	color = { 255 120 0 }
+	color = { 249 120 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_infra_score_to_140 = {
-	color = { 255 150 0 }
+	color = { 249 150 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_infra_score_to_150 = {
-	color = { 255 180 0 }
+	color = { 249 180 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_infra_score_to_160 = {
-	color = { 255 210 0 }
+	color = { 249 210 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_infra_score_to_170 = {
-	color = { 255 240 0 }
+	color = { 249 240 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_infra_score_to_180 = {
-	color = { 255 255 0 }
+	color = { 249 249 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 
+###### HARVEST MAP ######
+# good harvest: grey green to bright green
+d_line_map_harvest_good_1 = {
+	color = { 102 153 102 }
+	capital = c_roma
+	can_create = { always = no }
+}
+d_line_map_harvest_good_2 = {
+	color = { 34 139 34 }
+	capital = c_roma
+	can_create = { always = no }
+}
+
+d_line_map_harvest_normal = {
+	color = { 233 196 106 }
+	capital = c_roma
+	can_create = { always = no }
+}
+
+# bad harvest: grey red to bright red
+d_line_map_harvest_bad_1 = {
+	color = { 204 51 51 }
+	capital = c_roma
+	can_create = { always = no }
+}
+d_line_map_harvest_bad_2 = {
+	color = { 153 6 6 }
+	capital = c_roma
+	can_create = { always = no }
+}
+d_line_map_harvest_bad_3 = {
+	color = { 51 6 6 }
+	capital = c_roma
+	can_create = { always = no }
+}
 
 
 
 
 ###### RAIDING ######
 d_line_map_raiding_raided = {
-	color = { 255 48 0 }
+	color = { 249 48 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -402,7 +437,7 @@ d_line_map_raiding_raided_special = {
 	can_create = { always = no }
 }
 d_line_map_raiding_looted = {
-	color = { 255 72 0 }
+	color = { 249 72 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -412,19 +447,19 @@ d_line_map_raiding_raided_void = {
 	can_create = { always = no }
 }
 d_line_map_raiding_raidable = {
-	color = { 255 255 153 }
+	color = { 249 249 153 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_special_building_raidable = {
-	color = { 255 255 102 }
+	color = { 249 249 102 }
 	capital = c_roma
 	can_create = { always = no }
 }
 
 ###### FORTIFICATION ######
 d_line_map_fortification_0 = {
-	color = { 255 204 204 }
+	color = { 249 204 204 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -454,7 +489,7 @@ d_line_map_fortification_5 = {
 	can_create = { always = no }
 }
 d_line_map_fortification_6 = {
-	color = { 102 0 0 }
+	color = { 102 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -464,7 +499,7 @@ d_line_map_fortification_7 = {
 	can_create = { always = no }
 }
 d_line_map_fortification_8 = {
-	color = { 51 0 0 }
+	color = { 51 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -479,14 +514,14 @@ d_line_map_fortification_10 = {
 	can_create = { always = no }
 }
 d_line_map_fortification_11 = {
-	color = { 0 0 0 }
+	color = { 6 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 
 ###### ALLIANCE ######
 d_self = {
-	color = { 0 180 40 }
+	color = { 6 180 40 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -496,7 +531,7 @@ d_self_barony = {
 	can_create = { always = no }
 }
 d_self_barony_ally = {
-	color = { 0 51 0 }
+	color = { 6 51 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -506,47 +541,47 @@ d_self_liege = {
 	can_create = { always = no }
 }
 d_self_liege_barony = {
-	color = { 0 102 0 }
+	color = { 6 102 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_allied = {
-	color = { 0 0 204 }
+	color = { 6 6 204 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_allied_barony = {
-	color = { 0 0 60 }
+	color = { 6 6 60 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_allied_liege = {
-	color = { 51 51 255 }
+	color = { 51 51 249 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_allied_liege_barony = {
-	color = { 0 0 153 }
+	color = { 6 6 153 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_truce = {
-	color = { 255 0 0 }
+	color = { 249 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_truce_barony = {
-	color = { 255 62 62 }
+	color = { 249 62 62 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_truce_liege = {
-	color = { 255 102 102 }
+	color = { 249 102 102 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_truce_void = {
-	color = { 255 153 153 }
+	color = { 249 153 153 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -557,7 +592,7 @@ d_has_allies = {
 	can_create = { always = no }
 }
 d_has_allies_barony = {
-	color = { 255 255 153 }
+	color = { 249 249 153 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -573,7 +608,7 @@ d_has_allies_void = {
 }
 
 d_alone = {
-	color = { 255 255 80 }
+	color = { 249 249 80 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -583,12 +618,12 @@ d_alone_liege = {
 	can_create = { always = no }
 }
 d_alone_barony = {
-	color = { 255 255 15 }
+	color = { 249 249 15 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_alone_void = {
-	color = { 255 255 153 }
+	color = { 249 249 153 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -599,64 +634,64 @@ d_line_map_army_self = {
 	can_create = { always = no }
 }
 d_line_map_army_good_0 = {
-	color = { 255 255 250 }
+	color = { 249 249 250 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_army_good_1 = {
-	color = { 255 255 225 }
+	color = { 249 249 225 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_army_good_2 = {
-	color = { 255 255 200 }
+	color = { 249 249 200 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_army_good_3 = {
-	color = { 255 255 175 }
+	color = { 249 249 175 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_army_good_4 = {
-	color = { 255 255 150 }
+	color = { 249 249 150 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_army_good_5 = {
-	color = { 255 255 125 }
+	color = { 249 249 125 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_army_good_6 = {
-	color = { 255 255 100 }
+	color = { 249 249 100 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_army_good_7 = {
-	color = { 255 255 75 }
+	color = { 249 249 75 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_army_good_8 = {
-	color = { 255 255 50 }
+	color = { 249 249 50 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_army_good_9 = {
-	color = { 255 255 25 }
+	color = { 249 249 25 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_army_good_10 = {
-	color = { 255 255 0 }
+	color = { 249 249 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 
 ###### ARMY BAD ######
 d_line_map_army_bad_0 = {
-	color = { 255 204 204 }
+	color = { 249 204 204 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -686,7 +721,7 @@ d_line_map_army_bad_5 = {
 	can_create = { always = no }
 }
 d_line_map_army_bad_6 = {
-	color = { 102 0 0 }
+	color = { 102 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -696,7 +731,7 @@ d_line_map_army_bad_7 = {
 	can_create = { always = no }
 }
 d_line_map_army_bad_8 = {
-	color = { 51 0 0 }
+	color = { 51 6 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -714,117 +749,117 @@ d_line_map_army_bad_10 = {
 
 ###### LOOT LEVELS ######
 d_line_map_loot_0 = {
-	color = { 235 235 235 }
+	color = { 249 235 235 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_1= {
-	color = { 255 255 250 }
+	color = { 249 249 250 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_2 = {
-	color = { 255 255 225 }
+	color = { 249 249 225 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_3 = {
-	color = { 255 255 200 }
+	color = { 249 249 200 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_4 = {
-	color = { 255 255 175 }
+	color = { 249 249 175 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_5 = {
-	color = { 255 255 150 }
+	color = { 249 249 150 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_6 = {
-	color = { 255 255 125 }
+	color = { 249 249 125 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_7 = {
-	color = { 255 255 100 }
+	color = { 249 249 100 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_8 = {
-	color = { 255 255 75 }
+	color = { 249 249 75 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_9 = {
-	color = { 255 255 50 }
+	color = { 249 249 50 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_10 = {
-	color = { 255 255 25 }
+	color = { 249 249 25 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_11 = {
-	color = { 255 255 0 }
+	color = { 249 249 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_12 = {
-	color = { 255 204 50 }
+	color = { 249 204 50 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_13 = {
-	color = { 255 204 25 }
+	color = { 249 204 25 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_14 = {
-	color = { 255 204 0 }
+	color = { 249 204 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_15 = {
-	color = { 255 153 50 }
+	color = { 249 153 50 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_16 = {
-	color = { 255 153 25 }
+	color = { 249 153 25 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_17 = {
-	color = { 255 153 0 }
+	color = { 249 153 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_18 = {
-	color = { 255 102 50 }
+	color = { 249 102 50 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_19 = {
-	color = { 255 102 25 }
+	color = { 249 102 25 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_20 = {
-	color = { 255 102 0 }
+	color = { 249 102 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_21 = {
-	color = { 255 51 51 }
+	color = { 249 51 51 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_loot_22 = {
-	color = { 255 51 0 }
+	color = { 249 51 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
@@ -877,114 +912,114 @@ d_line_map_trade_0 = {
 	can_create = { always = no }
 }
 d_line_map_trade_1= {
-	color = { 255 255 250 }
+	color = { 249 249 250 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_2 = {
-	color = { 255 255 225 }
+	color = { 249 249 225 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_3 = {
-	color = { 255 255 200 }
+	color = { 249 249 200 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_4 = {
-	color = { 255 255 175 }
+	color = { 249 249 175 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_5 = {
-	color = { 255 255 150 }
+	color = { 249 249 150 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_6 = {
-	color = { 255 255 125 }
+	color = { 249 249 125 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_7 = {
-	color = { 255 255 100 }
+	color = { 249 249 100 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_8 = {
-	color = { 255 255 75 }
+	color = { 249 249 75 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_9 = {
-	color = { 255 255 50 }
+	color = { 249 249 50 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_10 = {
-	color = { 255 255 25 }
+	color = { 249 249 25 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_11 = {
-	color = { 255 255 0 }
+	color = { 249 249 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_12 = {
-	color = { 255 204 50 }
+	color = { 249 204 50 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_13 = {
-	color = { 255 204 25 }
+	color = { 249 204 25 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_14 = {
-	color = { 255 204 0 }
+	color = { 249 204 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_15 = {
-	color = { 255 153 50 }
+	color = { 249 153 50 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_16 = {
-	color = { 255 153 25 }
+	color = { 249 153 25 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_17 = {
-	color = { 255 153 0 }
+	color = { 249 153 6 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_18 = {
-	color = { 255 102 50 }
+	color = { 249 102 50 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_19 = {
-	color = { 255 102 25 }
+	color = { 249 102 25 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_20 = {
-	#color = { 255 102 0 }
+	#color = { 249 102 6 }
 	color = { 240 102 68 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_21 = {
-	#color = { 255 51 51 }
+	#color = { 249 51 51 }
 	color = { 241 92 26 }
 	capital = c_roma
 	can_create = { always = no }
 }
 d_line_map_trade_22 = {
-	color = { 255 51 0 }
+	color = { 249 51 6 }
 	capital = c_roma
 	can_create = { always = no }
 }

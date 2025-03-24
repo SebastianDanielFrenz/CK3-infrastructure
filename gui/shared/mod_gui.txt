@@ -377,26 +377,26 @@ types MapModes
 				}
 				
 				icon_button_mapmode = {
-					name = "map_mode_raiding_button"
+					name = "map_mode_population_target_button"
 					size = { 36 36 }
 
 					blockoverride "mm_button"
 					{
-						onclick = "[SetMapMode('raiding')]"
-						onclick = "[GetScriptedGui('line_raiding_map').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-						down = "[And( GetScriptedGui('line_raiding_map').IsShown(GuiScope.End), IsMapMode('raiding') )]"
-						enabled = "[And(Not(IsObserver), GetScriptedGui('line_raiding_map').IsValid(GuiScope.End))]"
-						tooltip = "MAPMODE_RAIDING_TOOLTIP"
+						onclick = "[SetMapMode('population_target')]"
+						onclick = "[GetScriptedGui('line_population_target_map').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						down = "[And( GetScriptedGui('line_population_target_map').IsShown(GuiScope.End), IsMapMode('population_target') )]"
+						enabled = "[And(Not(IsObserver), GetScriptedGui('line_population_target_map').IsValid(GuiScope.End))]"
+						tooltip = "MAPMODE_POPULATION_TARGET_TOOLTIP"
 					}
 					blockoverride "mm_icon"
 					{
-						down = "[IsMapMode('raiding')]"
+						down = "[IsMapMode('population_target')]"
 						texture = "gfx/interface/icons/flat_icons/mapmode_raiding.dds"
 					}
 
 					blockoverride "mm_glow"
 					{
-						visible = "[IsMapMode('raiding')]"
+						visible = "[IsMapMode('population_target')]"
 					}
 				}
 

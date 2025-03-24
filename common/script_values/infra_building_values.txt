@@ -47,13 +47,19 @@ population_level_target = {
 		limit = {
 			terrain = hills
 		}
-		add = -1.5
+		add = -1
 	}
 	if = {
 		limit = {
 			terrain = mountains
 		}
-		add = -1
+		add = -1.5
+	}
+	if = {
+		limit = {
+			terrain = desert_mountains
+		}
+		add = -1.5
 	}
 	# holding type
 	if = {
@@ -64,25 +70,25 @@ population_level_target = {
 	}
 	if = {
 		limit = {
-			scope:province.county.development_level >= 2
+			county.development_level >= 2
 		}
 		add = 0.5
 	}
 	if = {
 		limit = {
-			scope:province.county.development_level >= 5
+			county.development_level >= 5
 		}
 		add = 0.5
 	}
 	if = {
 		limit = {
-			scope:province.county.development_level >= 9
+			county.development_level >= 9
 		}
 		add = 0.5
 	}
 	if = {
 		limit = {
-			scope:province.county.development_level >= 14
+			county.development_level >= 14
 		}
 		add = 0.5
 	}
@@ -450,3 +456,6 @@ housing_levies_l_01 = @[housing_levies_base * 256]
 housing_levies_l_02 = @[housing_levies_base * 512]
 housing_levies_l_03 = @[housing_levies_base * 1024]
 housing_levies_l_04 = @[housing_levies_base * 2048]
+
+
+########## ROAD LEVELS ##########

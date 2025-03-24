@@ -4,3 +4,22 @@ infra_disaster_rule = {
 	infra_disaster_rule_off = {}
 	infra_disaster_rule_on = {}
 }
+
+infra_harvest_rule = {
+	default = infra_harvest_rule_off
+
+	infra_harvest_rule_off = {}
+	infra_harvest_rule_10 = {}
+	infra_harvest_rule_20 = {}
+	infra_harvest_rule_40 = {}
+	infra_harvest_rule_80 = {}
+	infra_harvest_rule_320 = {}
+}
+
+infra_harvest_apocalyptic_rule = {
+	default = infra_harvest_apocalyptic_rule_off
+
+	infra_harvest_apocalyptic_rule_off = {}
+	infra_harvest_apocalyptic_rule_rare = {}
+	infra_harvest_apocalyptic_rule_common = {}
+}
